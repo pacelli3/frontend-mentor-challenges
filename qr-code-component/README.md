@@ -4,6 +4,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ## Table of contents
 
+- [Getting Started](#getting-started)
 - [Overview](#overview)
     - [Screenshot](#screenshot)
     - [Links](#links)
@@ -14,6 +15,29 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - [Author](#author)
 - [License](#license)
 
+## Getting started
+
+Clone the repo and install the dependencies:
+
+```bash
+git clone git@github.com:pacelli3/frontend-mentor-challenges.git
+cd frontend-mentor-challenges/qr-code-component
+npm install
+```
+
+Start Vite's dev server:
+
+```bash
+npm run dev
+```
+
+This project uses [Prettier](https://prettier.io/docs/) for code formatting:
+
+```bash
+npm run prettier:fix # Format files
+npm run prettier:check # List unformatted files
+```
+
 ## Overview
 
 ### Screenshot
@@ -22,8 +46,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Live](https://qr-code-component-pacelli3.netlify.app/)
+- Solution URL: [Check](https://www.frontendmentor.io/solutions/responsive-qr-code-component-using-vite-css-and-semantic-html-7HFkjgN0IL)
+- Live Site URL: [Check](https://qr-code-component-pacelli3.netlify.app/)
 
 ## My process
 
