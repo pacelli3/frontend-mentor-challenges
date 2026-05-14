@@ -4,6 +4,6 @@ This repo contains solutions to [Free and Free+ challenges](https://www.frontend
 
 ## Challenges
 
-|       Title       |                                  Challenge                                   |         Deployment         |
-| :---------------: | :--------------------------------------------------------------------------: | :------------------------: |
-| QR code component | [Link](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H) | [See](/qr-code-component/) |
+|       Title       |             Challenge              |
+| :---------------: | :--------------------------------: |
+| QR code component | [See solution](/qr-code-component) |
