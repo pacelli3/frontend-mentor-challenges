@@ -54,8 +54,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Check](https://www.frontendmentor.io/solutions/responsive-blog-preview-card-with-flexbox-and-css-grid-NwgcSfC1C4)
+- Live Site URL: [Check](https://blog-preview-card-pacelli3.netlify.app/)
 
 ## My process
 
