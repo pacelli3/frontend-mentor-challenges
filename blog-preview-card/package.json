@@ -1,0 +1,17 @@
+{
+    "name": "blog-preview-card",
+    "description": "Solution to the Blog Preview Card from Frontend Mentor",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "prettier:fix": "prettier . --write",
+        "prettier:check": "prettier . --check"
+    },
+    "devDependencies": {
+        "vite": "^8.0.12",
+        "prettier": "3.8.3"
+    }
+}

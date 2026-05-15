@@ -1,0 +1,326 @@
+/* --------------------------------------------------- */
+/* Custom Properties                                   */
+/* --------------------------------------------------- */
+
+:root {
+    --clr-yellow: 47 88% 63%;
+    --clr-gray-500: 0 0% 42%;
+    --clr-gray-950: 0 0% 7%;
+    --clr-white: 0 0% 100%;
+    --clr-black: 0 0% 0%;
+
+    --ff-sans-serif: "Figtree", sans-serif;
+
+    --fs-300: 1.5rem;
+    --fs-200: 1rem;
+    --fs-100: 0.875rem;
+
+    --fw-regular: 500;
+    --fw-bold: 800;
+
+    --letter-spacing-0: 0px;
+}
+
+/* --------------------------------------------------- */
+/* Resets                                              */
+/* --------------------------------------------------- */
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+picture,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Sets a global font weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* Makes images easier to work with */
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Button rules */
+button {
+    cursor: pointer;
+    background: none;
+    border: 0;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* Remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* --------------------------------------------------- */
+/* Utility Classes                                     */
+/* --------------------------------------------------- */
+
+/* General */
+
+.container {
+    min-width: 20rem;
+    max-width: 90rem;
+    padding-inline: 2rem;
+    margin-inline: auto;
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap-row, 1rem) var(--gap-col, 1rem);
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap-row, 1rem) var(--gap-col, 1rem);
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.d-block {
+    display: block;
+}
+
+.m-top {
+    margin-top: var(--top-space, 1rem);
+}
+
+/* Colors */
+
+.text-yellow {
+    color: hsl(var(--clr-yellow));
+}
+
+.text-gray-950 {
+    color: hsl(var(--clr-gray-950));
+}
+
+.text-gray-500 {
+    color: hsl(var(--clr-gray-500));
+}
+
+.text-white {
+    color: hsl(var(--clr-white));
+}
+
+.bg-yellow {
+    background-color: hsl(var(--clr-yellow));
+}
+
+.bg-gray-950 {
+    background-color: hsl(var(--clr-gray-950));
+}
+
+.bg-gray-500 {
+    background-color: hsl(var(--clr-gray-500));
+}
+
+.bg-white {
+    background-color: hsl(var(--clr-white));
+}
+
+/* Typography */
+
+.text-preset-1 {
+    font-size: var(--fs-300);
+    font-weight: var(--fw-bold);
+}
+
+.text-preset-2 {
+    font-size: var(--fs-200);
+    font-weight: var(--fw-regular);
+}
+
+.text-preset-3 {
+    font-size: var(--fs-100);
+    font-weight: var(--fw-regular);
+}
+
+.text-preset-3--bold {
+    font-size: var(--fs-100);
+    font-weight: var(--fw-bold);
+}
+
+/* --------------------------------------------------- */
+/* Components                                          */
+/* --------------------------------------------------- */
+
+body {
+    letter-spacing: var(--letter-spacing-0);
+    font-family: var(--ff-sans-serif);
+    font-weight: var(--fw-regular);
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.main {
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    border-radius: 1.25rem;
+    filter: drop-shadow(8px 8px 0px hsl(var(--clr-black) / 1));
+    outline: 1px solid hsl(var(--clr-gray-950));
+    padding: 1.5rem;
+    max-width: 24rem;
+    min-width: 20.4375rem;
+    --gap-row: 1.125rem;
+    transition: background-color 500ms ease-in-out;
+}
+
+.post-img {
+    border-radius: 0.625rem;
+}
+
+.card h1 {
+    transition: color 500ms ease-in-out;
+}
+
+/* 'Stretched Link' CSS rule */
+.card-link::after {
+    content: "";
+    position: absolute;
+    inset: 0; /* Makes it cover the entire surface of the card (drop-shadow excluded) */
+}
+
+.card h1:hover {
+    color: hsl(var(--clr-yellow));
+}
+
+.badge {
+    --top-space: 0.4rem;
+    justify-self: start;
+    padding-inline: 0.75rem;
+    padding-block: 0.25rem;
+    border-radius: 4px;
+}
+
+.card figure {
+    align-items: center;
+    --top-space: 0.4rem;
+    --gap-col: 0.75rem;
+}
+
+.author-avatar {
+    width: 32px;
+    aspect-ratio: 1;
+}
+
+.attribution {
+    align-items: center;
+}
+
+.attribution .link {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 3px;
+    transition: color 500ms ease-in-out;
+}
+
+.attribution .link:focus,
+.attribution .link:hover {
+    color: hsl(var(--clr-gray-950) / 0.6);
+}

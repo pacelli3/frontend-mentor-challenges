@@ -1,0 +1,77 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+    <head>
+        <!-- Display site properly based on user's device -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Metadata -->
+        <title>Frontend Mentor | Blog preview card</title>
+        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/src/style.css" />
+    </head>
+
+    <body class="bg-yellow grid text-gray-500">
+        <main class="main container flex">
+            <article class="card bg-white grid">
+                <img
+                    class="post-img"
+                    src="/src/assets/images/illustration-article.svg"
+                    alt="blog card image."
+                />
+                <span class="badge d-block bg-yellow text-gray-950 text-preset-3--bold m-top"
+                    >Learning</span
+                >
+                <p class="text-gray-950 text-preset-3">
+                    Published <time datetime="2023-12-01">21 Dec 2023</time>
+                </p>
+                <h1 class="text-gray-950 text-preset-1">
+                    <!-- This is a 'Stretched Link' -->
+                    <a class="card-link" href="#">HTML & CSS foundations</a>
+                </h1>
+                <p class="text-preset-2">
+                    These languages are the backbone of every website, defining structure, content,
+                    and presentation.
+                </p>
+
+                <figure class="flex m-top">
+                    <img
+                        class="author-avatar"
+                        src="/src/assets/images/image-avatar.webp"
+                        alt="Photo of the author: Greg Hooper."
+                    />
+
+                    <figcaption class="text-gray-950 text-preset-3--bold">Greg Hooper</figcaption>
+                </figure>
+            </article>
+        </main>
+
+        <footer class="attribution container flex">
+            <p class="text-gray-950 text-preset-2">
+                Challenge by
+                <a
+                    class="link"
+                    href="https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >. Coded by
+                <a
+                    class="link"
+                    href="https://www.frontendmentor.io/profile/pacelli3"
+                    target="_blank"
+                    >Pacelli</a
+                >.
+            </p>
+        </footer>
+    </body>
+</html>
