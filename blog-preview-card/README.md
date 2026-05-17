@@ -15,6 +15,7 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
     - [Useful resources](#useful-resources)
     - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
+- [License](#license)
 
 ## Getting started
 
@@ -236,3 +237,7 @@ With these changes "HTML & CSS foundations" is what will be read to the user.
 ## Author
 
 - Frontend Mentor - [@pacelli3](https://www.frontendmentor.io/profile/pacelli3)
+
+## License
+
+This project is licensed under the [MIT License](../LICENSE).

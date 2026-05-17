@@ -54,8 +54,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Check](https://your-solution-url.com)
-- Live Site URL: [Check](https://your-live-site-url.com)
+- Solution URL: [Check](https://www.frontendmentor.io/solutions/responsive-social-links-profile-with-html-and-css-wCcKdFgESG)
+- Live Site URL: [Check](https://social-links-profile-pacelli3.netlify.app/)
 
 ## My process
 
