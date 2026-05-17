@@ -1,6 +1,26 @@
-/* --------------------------------------------------- */
-/* Custom Properties                                   */
-/* --------------------------------------------------- */
+/* ------------------------------------------------------------ */
+/*                           FONT FACE                          */
+/* ------------------------------------------------------------ */
+
+@font-face {
+    font-display: swap;
+    font-family: "Figtree";
+    font-style: normal;
+    font-weight: 500;
+    src: url("./assets/fonts/static/figtree-v9-latin-500.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Figtree";
+    font-style: normal;
+    font-weight: 800;
+    src: url("./assets/fonts/static/figtree-v9-latin-800.woff2") format("woff2");
+}
+
+/* ------------------------------------------------------------ */
+/*                       CUSTOM PROPERTIES                      */
+/* ------------------------------------------------------------ */
 
 :root {
     --clr-yellow: 47 88% 63%;
@@ -21,9 +41,9 @@
     --letter-spacing-0: 0px;
 }
 
-/* --------------------------------------------------- */
-/* Resets                                              */
-/* --------------------------------------------------- */
+/* ------------------------------------------------------------ */
+/*                            RESETS                            */
+/* ------------------------------------------------------------ */
 
 /* Box sizing rules */
 
@@ -158,7 +178,6 @@ textarea:not([rows]) {
 /* General */
 
 .container {
-    min-width: 20rem;
     max-width: 90rem;
     padding-inline: 2rem;
     margin-inline: auto;
@@ -249,9 +268,8 @@ textarea:not([rows]) {
 body {
     letter-spacing: var(--letter-spacing-0);
     font-family: var(--ff-sans-serif);
-    font-weight: var(--fw-regular);
     font-optical-sizing: auto;
-    font-style: normal;
+    font-weight: var(--fw-regular);
 }
 
 .main {
@@ -260,13 +278,11 @@ body {
 }
 
 .card {
-    position: relative;
     border-radius: 1.25rem;
     filter: drop-shadow(8px 8px 0px hsl(var(--clr-black) / 1));
     outline: 1px solid hsl(var(--clr-gray-950));
     padding: 1.5rem;
     max-width: 24rem;
-    min-width: 20.4375rem;
     --gap-row: 1.125rem;
     transition: background-color 500ms ease-in-out;
 }
@@ -277,13 +293,6 @@ body {
 
 .card h1 {
     transition: color 500ms ease-in-out;
-}
-
-/* 'Stretched Link' CSS rule */
-.card-link::after {
-    content: "";
-    position: absolute;
-    inset: 0; /* Makes it cover the entire surface of the card (drop-shadow excluded) */
 }
 
 .card h1:hover {
@@ -306,7 +315,7 @@ body {
 
 .author-avatar {
     width: 32px;
-    aspect-ratio: 1;
+    height: 32px;
 }
 
 .attribution {

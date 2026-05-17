@@ -14,7 +14,9 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
     - [What I learned](#what-i-learned)
     - [Useful resources](#useful-resources)
     - [AI Collaboration](#ai-collaboration)
+    - [Improvements](#improvements)
 - [Author](#author)
+- [Acknowledgments](#acknowledgments)
 - [License](#license)
 
 ## Getting started
@@ -234,9 +236,25 @@ article a::after {
 
 With these changes "HTML & CSS foundations" is what will be read to the user.
 
+### Improvements
+
+To avoid cluttering the file with too much information, the improvents can be read in [IMPROVEMENTS.md](IMPROVEMENTS.md).
+
 ## Author
 
 - Frontend Mentor - [@pacelli3](https://www.frontendmentor.io/profile/pacelli3)
+
+## Acknowledgments
+
+Thanks to [Elmar Chavez (@CodingWithJiro)](https://www.frontendmentor.io/profile/CodingWithJiro) for the comprehensive and detailed feedback to improve my project on areas like:
+
+- self-host fonts,
+- preventing cumulative layout shifts (CLS),
+- reducing Flash of Unstyled Text (FOUT)
+- responsive design,
+- commentary on semantic HTML
+
+Improvements recommended by Elmar are explained in the [Improvements](#improvements) section.
 
 ## License
 
