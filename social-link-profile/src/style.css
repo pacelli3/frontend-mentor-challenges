@@ -1,0 +1,325 @@
+/* ------------------------------------------------------------ */
+/*                       CUSTOM PROPERTIES                      */
+/* ------------------------------------------------------------ */
+
+:root {
+    --clr-green: 75 94% 57%;
+    --clr-grey-700: 0 0% 20%;
+    --clr-grey-800: 0 0% 12%;
+    --clr-grey-900: 0 0% 8%;
+    --clr-white: 0 0% 100%;
+    --clr-black: 0 0% 0%;
+
+    --ff-sans-serif: "Inter", sans-serif;
+
+    --fs-300: 1.25rem;
+    --fs-200: 1rem;
+    --fs-100: 0.875rem;
+
+    --fw-regular: 400;
+    --fw-mid: 600;
+    --fw-bold: 800;
+}
+
+/* ------------------------------------------------------------ */
+/*                            RESETS                            */
+/* ------------------------------------------------------------ */
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+picture,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Sets a global font weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* Makes images easier to work with */
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Button rules */
+button {
+    cursor: pointer;
+    background: none;
+    border: 0;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* Remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ------------------------------------------------------------ */
+/*                        UTILITY CLASSES                       */
+/* ------------------------------------------------------------ */
+
+/* General */
+
+.container {
+    max-width: 80rem;
+    padding-inline: 2rem;
+    margin-inline: auto;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap-row, 1rem) var(--gap-col, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap-row, 1rem) var(--gap-col, 1rem);
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.m-top {
+    margin-top: var(--top-space, 1rem);
+}
+
+/* Colors */
+
+.text-green {
+    color: hsl(var(--clr-green));
+}
+
+.text-gray-700 {
+    color: hsl(var(--clr-gray-700));
+}
+
+.text-gray-800 {
+    color: hsl(var(--clr-gray-800));
+}
+
+.text-gray-900 {
+    color: hsl(var(--clr-gray-900));
+}
+
+.text-white {
+    color: hsl(var(--clr-white));
+}
+
+.bg-green {
+    background-color: hsl(var(--clr-green));
+}
+
+.bg-grey-700 {
+    background-color: hsl(var(--clr-grey-700));
+}
+
+.bg-grey-800 {
+    background-color: hsl(var(--clr-grey-800));
+}
+
+.bg-grey-900 {
+    background-color: hsl(var(--clr-grey-900));
+}
+
+/* Typography */
+
+.text-preset-1 {
+    font-size: var(--fs-300);
+    font-weight: var(--fw-mid);
+}
+
+.text-preset-2 {
+    font-size: var(--fs-100);
+    font-weight: var(--fw-mid);
+}
+
+.text-preset-3 {
+    font-size: var(--fs-100);
+    font-weight: var(--fw-regular);
+}
+
+/* ------------------------------------------------------------ */
+/*                          COMPONENTS                          */
+/* ------------------------------------------------------------ */
+
+body {
+    font-family: var(--ff-sans-serif);
+    font-weight: var(--fw-bold);
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.card {
+    border-radius: 0.625rem;
+    justify-items: center;
+    padding: 2rem;
+    max-width: 24rem;
+    --flow-space: 1.5rem;
+    --top-space: 1.75rem;
+}
+
+.figure {
+    text-align: center;
+    --gap-row: 1.75rem;
+}
+
+.figure img {
+    filter: drop-shadow(0px 0px 1px hsl(var(--clr-black) / 0.5));
+    margin-inline: auto;
+    border-radius: 50%;
+    width: 80px;
+    aspect-ratio: 1;
+}
+
+.figure figcaption {
+    --gap-row: 0.5rem;
+}
+
+.figure address {
+    font-style: normal;
+}
+
+.figure p {
+    --top-space: 0.75rem;
+}
+
+.card ul {
+    width: 100%;
+}
+
+.card .link {
+    border-radius: 6px;
+    display: block;
+    padding: 0.625rem;
+    text-align: center;
+    transition:
+        background-color 500ms ease-in-out,
+        color 500ms ease-in;
+}
+
+.card .link:hover,
+.card .link:focus {
+    background-color: hsl(var(--clr-green));
+    color: hsl(var(--clr-grey-900));
+}
+
+.attribution {
+    align-items: center;
+    padding-block-end: 0.5rem;
+}
+
+.attribution .link {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-style: dotted;
+    transition: color 500ms ease-in-out;
+}
+
+.attribution .link:hover,
+.attribution .link:focus {
+    color: hsl(var(--clr-green));
+    text-decoration-color: hsl(var(--clr-green));
+}
