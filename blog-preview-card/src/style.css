@@ -295,8 +295,13 @@ body {
     transition: color 500ms ease-in-out;
 }
 
-.card h1:hover {
+.card h1 > a:hover,
+.card h1 > a:focus-visible {
     color: hsl(var(--clr-yellow));
+}
+
+.card h1 > a:focus-visible {
+    outline: 1px solid hsl(var(--clr-yellow));
 }
 
 .badge {
