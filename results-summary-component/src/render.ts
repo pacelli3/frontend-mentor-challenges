@@ -18,25 +18,20 @@ const getColor = (category: string) => {
 
 const getListItem = (category: string, url: string, score: number, color: string) => {
     return `
-        <li class="card__summary-score-item bg-primary-${color} flex">
-            <figure class="card__score-item-figure flex">
-                <img
-                    class="card__figure-img"
-                    alt=""
-                    height="20"
-                    width="20"
-                    src="${url}"
-                />
-                <figcaption class="text-preset-1 text-primary-${color}">
-                    ${category}
-                </figcaption>
-            </figure>
+    <li class="card__summary-score-item bg-primary-${color} flex">
+        <figure class="card__score-item-figure flex">
+            <img class="card__figure-img" alt="" height="20" width="20" src="${url}" />
+            <figcaption class="text-preset-1 text-primary-${color}">${category}</figcaption>
+        </figure>
 
-            <p class="fw-bold text-dark-grey-blue--50 text-preset-1">
-                <span class="d-inline-block text-dark-grey-blue m-right">${score}</span> /
-                100
-            </p>
-        </li>    
+        <p class="fw-bold text-dark-grey-blue--50 text-preset-1">
+            <span class="d-inline-block text-dark-grey-blue m-right">${score}</span>
+            <span aria-hidden="true">/</span>
+            <span class="sr-only">out of</span>
+            100
+            <span class="sr-only">.</span>
+        </p>
+    </li>    
 `;
 };
 
