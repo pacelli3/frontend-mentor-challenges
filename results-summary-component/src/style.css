@@ -230,11 +230,11 @@ textarea:not([rows]) {
 }
 
 .flow > * + * {
-    margin-top: var(--flow-space, 1rem);
+    margin-block-start: var(--flow-space, 1rem);
 }
 
 .m-right {
-    margin-right: 0.25rem;
+    margin-inline-start: 0.25rem;
 }
 
 .d-block {
@@ -330,7 +330,7 @@ textarea:not([rows]) {
 }
 
 .letter-spacing-0 {
-    letter-spacing: 0px;
+    letter-spacing: 0rem;
 }
 
 .letter-spacing-1 {
@@ -391,8 +391,8 @@ body {
 .card__section--result {
     --gap-row: 1.3rem;
     padding-inline: 2rem;
-    border-bottom-left-radius: 27px;
-    border-bottom-right-radius: 27px;
+    border-bottom-left-radius: 1.6875rem;
+    border-bottom-right-radius: 1.6875rem;
     justify-items: center;
     background-image: linear-gradient(hsl(var(--grad-bg-start)), hsl(var(--grad-bg-end)));
     z-index: 1;
@@ -400,7 +400,7 @@ body {
     @media screen and (min-width: 48rem) {
         --gap-row: 1.75rem;
         padding-inline: 2.75rem;
-        border-radius: 27px;
+        border-radius: 1.6875rem;
     }
 }
 
@@ -410,13 +410,13 @@ body {
     justify-content: center;
     align-content: center;
     border-radius: 50%;
-    width: 110px;
-    height: 110px;
+    width: 6.875rem;
+    height: 6.875rem;
     background-image: linear-gradient(hsl(var(--grad-circle-start)), hsl(var(--grad-circle-end)));
 
     @media screen and (min-width: 48rem) {
-        width: 150px;
-        height: 150px;
+        width: 9.375rem;
+        height: 9.375rem;
     }
 }
 
@@ -442,8 +442,8 @@ body {
 
     @media screen and (min-width: 48rem) {
         --gap-row: 1.5rem;
-        border-top-right-radius: 27px;
-        border-bottom-right-radius: 27px;
+        border-top-right-radius: 1.6875rem;
+        border-bottom-right-radius: 1.6875rem;
         padding-block-start: 2rem;
         padding-inline: 2.8rem 2rem;
         margin-block-start: auto;
@@ -459,7 +459,7 @@ body {
     align-items: center;
     --gap-col: 0.5rem;
     justify-content: space-between;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     padding-block: 0.75rem;
     padding-inline: 0.75rem;
 }
@@ -470,14 +470,14 @@ body {
 }
 
 .card__figure-img {
-    width: 15px;
-    height: 15px;
+    width: 0.9375rem;
+    height: 0.9375rem;
 }
 
 .card__summary-cta {
     /* Default styles */
     padding-block: 0.85rem;
-    border-radius: 25px;
+    border-radius: 1.5625rem;
     transition: background-image 500ms ease-in-out;
 
     &:hover {
@@ -485,14 +485,14 @@ body {
     }
 
     &:focus-visible {
-        outline: 3px solid hsl(var(--clr-dark-gray-blue));
+        outline: 0.1875rem solid hsl(var(--clr-dark-gray-blue));
         background-image: linear-gradient(hsl(var(--grad-bg-start)), hsl(var(--grad-bg-end)));
     }
 
     /* If the `:focus-visible` pseudo selector is not supported by the browser, then `:focus` is applied as fallback */
     @supports not selector(:focus-visible) {
         &:focus {
-            outline: 3px solid hsl(var(--clr-dark-gray-blue));
+            outline: 0.1875rem solid hsl(var(--clr-dark-gray-blue));
             background-image: linear-gradient(hsl(var(--grad-bg-start)), hsl(var(--grad-bg-end)));
         }
     }
@@ -512,7 +512,7 @@ body {
     /* Default styles */
     text-decoration: underline;
     text-decoration-style: dotted;
-    text-underline-offset: 3px;
+    text-underline-offset: 0.1875rem;
     transition: color 500ms ease-in-out;
 
     &:hover {
@@ -521,16 +521,16 @@ body {
 
     &:focus-visible {
         color: hsl(var(--clr-dark-gray-blue) / 50%);
-        outline: 2px solid hsl(var(--clr-dark-gray-blue));
-        box-shadow: 0 0 4px hsl(var(--clr-dark-gray-blue));
+        outline: 0.125rem solid hsl(var(--clr-dark-gray-blue));
+        box-shadow: 0 0 0.25rem hsl(var(--clr-dark-gray-blue));
     }
 
     /* If the `:focus-visible` pseudo selector is not supported by the browser, then `:focus` styles are applied as fallback */
     @supports not selector(:focus-visible) {
         &:focus {
             color: hsl(var(--clr-dark-gray-blue) / 50%);
-            outline: 2px solid hsl(var(--clr-dark-gray-blue));
-            box-shadow: 0 0 4px hsl(var(--clr-dark-gray-blue));
+            outline: 0.125rem solid hsl(var(--clr-dark-gray-blue));
+            box-shadow: 0 0 0.25rem hsl(var(--clr-dark-gray-blue));
         }
     }
 }
