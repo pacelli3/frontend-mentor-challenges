@@ -13,6 +13,7 @@ This is a solution to the [Results summary component challenge on Frontend Mento
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
     - [Useful resources](#useful-resources)
+    - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
 - [License](#license)
 
@@ -55,8 +56,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Check]()
-- Live Site URL: [Check]()
+- Solution URL: [Check](https://www.frontendmentor.io/solutions/responsive-social-links-profile-with-html-and-css-wCcKdFgESG)
+- Live Site URL: [Check](https://results-summary-component-pacelli3.netlify.app/)
 
 ## My process
 
@@ -159,6 +160,10 @@ I used the following resources to dive deeper into certain HTML elements to unde
 - [TypeScript](https://www.typescriptlang.org/)
 - [Non-null assertion operator](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator)
 - [PerfectPixel by WellDoneCode (pixel perfect)](https://www.welldonecode.com/perfectpixel/)
+
+### AI Collaboration
+
+With the help of DeepSeek we solved path resolution context mismatch for the SVGs. Originally, the `icon` properties defined relative paths for the SVGs, e.g. `./assets/images/icon-verbal.svg`, but I couldn't find a way to dynamically access them with TypeScript. DeepSeek proposed to move them to `public` and use absolute paths, e.g. `/images/icon-visual.svg`.
 
 ## Author
 
