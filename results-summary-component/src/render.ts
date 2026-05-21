@@ -16,7 +16,7 @@ const getColor = (category: string) => {
     }
 };
 
-const getListItem = (category: string, icon: string, score: number, color: string) => {
+const getListItem = (category: string, url: string, score: number, color: string) => {
     return `
         <li class="card__summary-score-item bg-primary-${color} flex">
             <figure class="card__score-item-figure flex">
@@ -25,7 +25,7 @@ const getListItem = (category: string, icon: string, score: number, color: strin
                     alt=""
                     height="20"
                     width="20"
-                    src="${icon}"
+                    src="${url}"
                 />
                 <figcaption class="text-preset-1 text-primary-${color}">
                     ${category}
@@ -45,7 +45,7 @@ const render = () => {
 
     let listItems = "";
 
-    data.forEach(
+    data.map(d => ({ ...d, icon: new URL(d.icon, import.meta.url).href })).forEach(
         d => (listItems += getListItem(d.category, d.icon, d.score, getColor(d.category))),
     );
 
