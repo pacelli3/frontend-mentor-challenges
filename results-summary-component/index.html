@@ -1,0 +1,96 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+    <head>
+        <!-- Display site properly based on user's device -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Metadata -->
+        <title>Frontend Mentor | Results summary component</title>
+        <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32" flex />
+
+        <!-- Fonts preloads — requests the necessary fonts in advance to avoid Flash of Unstyle Text (FOUT) -->
+        <link
+            rel="preload"
+            href="src/assets/fonts/hanken-grotesk-v12-latin-500.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+
+        <link
+            rel="preload"
+            href="src/assets/fonts/hanken-grotesk-v12-latin-700.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+
+        <link
+            rel="preload"
+            href="src/assets/fonts/hanken-grotesk-v12-latin-800.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="src/style.css" />
+
+        <!-- Script -->
+        <script src="src/render.ts" type="module"></script>
+    </head>
+
+    <body class="bg-pale-blue grid text-white">
+        <main class="container text-white">
+            <article class="card grid">
+                <section class="card__section card__section--result grid">
+                    <h2 class="capitalize text-light-lavender text-preset-2">Your result</h2>
+                    <p class="card__result-score flow grid text-center text-light-lavender">
+                        <data class="d-block fw-bold text-preset-3 text-white" value="76">76</data>
+                        <span class="text-light-lavender--50 text-preset-1">of 100</span>
+                    </p>
+
+                    <div class="card__result-description-container flow">
+                        <p class="text-center text-preset-4">Great</p>
+                        <p
+                            class="card__description-msg letter-spacing-1 text-center text-light-lavender text-preset-1"
+                        >
+                            You scored higher than 65% of the people who has taken these tests.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="card__section card__section--summary bg-white flow grid">
+                    <h2 class="fw-mid letter-spacing-0 text-dark-grey-blue text-preset-2">
+                        Summary
+                    </h2>
+
+                    <ul class="card__summary-details grid" id="card__summary-details"></ul>
+
+                    <button class="card__summary-cta bg-dark-grey-blue text-preset-2">
+                        Continue
+                    </button>
+                </section>
+            </article>
+        </main>
+
+        <footer class="attribution container flex text-dark-grey-blue">
+            <p>
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV"
+                    class="attribution__link"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >. Coded by
+                <a
+                    href="https://www.frontendmentor.io/profile/pacelli3"
+                    class="attribution__link"
+                    target="_blank"
+                    >Pacelli</a
+                >.
+            </p>
+        </footer>
+    </body>
+</html>

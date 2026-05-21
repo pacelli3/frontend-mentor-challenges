@@ -1,0 +1,536 @@
+/* ------------------------------------------------------------ */
+/*                           FONT FACE                          */
+/* ------------------------------------------------------------ */
+
+/* hanken-grotesk-500 - latin */
+@font-face {
+    font-display: swap;
+    font-family: "Hanken Grotesk";
+    font-style: normal;
+    font-weight: 500;
+    src: url("assets/fonts/hanken-grotesk-v12-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* hanken-grotesk-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: "Hanken Grotesk";
+    font-style: normal;
+    font-weight: 700;
+    src: url("assets/fonts/hanken-grotesk-v12-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* hanken-grotesk-800 - latin */
+@font-face {
+    font-display: swap;
+    font-family: "Hanken Grotesk";
+    font-style: normal;
+    font-weight: 800;
+    src: url("assets/fonts/hanken-grotesk-v12-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* ------------------------------------------------------------ */
+/*                       CUSTOM PROPERTIES                      */
+/* ------------------------------------------------------------ */
+
+:root {
+    /* Primary colors */
+    --clr-primary-red: 0 100% 67%;
+    --clr-primary-yellow: 39 100% 56%;
+    --clr-primary-green: 166 100% 37%;
+    --clr-primary-blue: 234 85% 45%;
+
+    /* Gradients colors */
+    --grad-bg-start: 252 100% 67%;
+    --grad-bg-end: 241 81% 54%;
+    --grad-circle-start: 256 72% 46% / 1;
+    --grad-circle-end: 241 72% 46% / 0;
+
+    /* Neutral colors */
+    --clr-white: 0 0% 100%;
+    --clr-pale-blue: 221 100% 96%;
+    --clr-light-lavender: 241 100% 89%;
+    --clr-dark-gray-blue: 224 30% 27%;
+
+    /* Font sizes */
+    --fs-400: 1.25rem;
+    --fs-300: 2.75rem;
+    --fs-200: 0.9rem;
+    --fs-100: 0.8rem;
+
+    /* Font families */
+    --ff-sans-serif: "Hanken Grotesk", sans-serif;
+
+    /* Font weight */
+    --fw-regular: 500;
+    --fw-mid: 700;
+    --fw-bold: 800;
+
+    @media screen and (min-width: 48rem) {
+        /* Font sizes */
+        --fs-400: 1.5rem;
+        --fs-300: 3.5rem;
+        --fs-200: 1.25rem;
+        --fs-100: 0.9rem;
+    }
+}
+
+/* ------------------------------------------------------------ */
+/*                            RESETS                            */
+/* ------------------------------------------------------------ */
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+picture,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Sets a global font weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* Makes images easier to work with */
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label,
+p {
+    line-height: 1.1;
+}
+
+/* Button rules */
+button {
+    cursor: pointer;
+    background: none;
+    border: 0;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* Remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ------------------------------------------------------------ */
+/*                        UTILITY CLASSES                       */
+/* ------------------------------------------------------------ */
+
+/* General */
+
+.container {
+    max-width: 80rem;
+    padding-inline: 1rem;
+    margin-inline: auto;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap-row, 1rem) var(--gap-col, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap-row, 1rem) var(--gap-col, 1rem);
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.m-right {
+    margin-right: 0.25rem;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+/* Colors */
+
+.bg-pale-blue {
+    background-color: hsl(var(--clr-pale-blue));
+}
+
+.bg-white {
+    background-color: hsl(var(--clr-white));
+}
+
+.bg-primary-red {
+    background-color: hsl(var(--clr-primary-red) / 5%);
+}
+
+.bg-primary-yellow {
+    background-color: hsl(var(--clr-primary-yellow) / 5%);
+}
+
+.bg-primary-green {
+    background-color: hsl(var(--clr-primary-green) / 5%);
+}
+
+.bg-primary-blue {
+    background-color: hsl(var(--clr-primary-blue) / 5%);
+}
+
+.bg-dark-grey-blue {
+    background-color: hsl(var(--clr-dark-gray-blue));
+}
+
+.text-primary-red {
+    color: hsl(var(--clr-primary-red));
+}
+
+.text-primary-yellow {
+    color: hsl(var(--clr-primary-yellow));
+}
+
+.text-primary-green {
+    color: hsl(var(--clr-primary-green));
+}
+
+.text-primary-blue {
+    color: hsl(var(--clr-primary-blue));
+}
+
+.text-white {
+    color: hsl(var(--clr-white));
+}
+
+.text-dark-grey-blue {
+    color: hsl(var(--clr-dark-gray-blue));
+}
+
+.text-dark-grey-blue--50 {
+    color: hsl(var(--clr-dark-gray-blue) / 50%);
+}
+
+.text-light-lavender {
+    color: hsl(var(--clr-light-lavender));
+}
+
+.text-light-lavender--50 {
+    color: hsl(var(--clr-light-lavender) / 50%);
+}
+
+/* Typography */
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.fw-regular {
+    font-weight: var(--fw-regular);
+}
+
+.fw-mid {
+    font-weight: var(--fw-mid);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+.letter-spacing-0 {
+    letter-spacing: 0px;
+}
+
+.letter-spacing-1 {
+    letter-spacing: 0.25px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-preset-1 {
+    font-size: var(--fs-100);
+}
+
+.text-preset-2 {
+    font-size: var(--fs-200);
+}
+
+.text-preset-3 {
+    font-size: var(--fs-300);
+}
+
+.text-preset-4 {
+    font-size: var(--fs-400);
+}
+
+/* ------------------------------------------------------------ */
+/*                          COMPONENTS                          */
+/* ------------------------------------------------------------ */
+
+body {
+    overflow: hidden;
+    font-family: var(--ff-sans-serif);
+    font-optical-sizing: auto;
+    --gap-row: 0;
+    --gap-col: 0;
+}
+
+.card {
+    margin-inline: auto;
+    grid-template-columns: minmax(0, 18.75rem);
+
+    @media screen and (min-width: 48rem) {
+        margin-block-start: 2.5rem;
+        grid-template-columns: repeat(2, minmax(0, 18.75rem));
+    }
+}
+
+.card__section {
+    position: relative;
+    padding-block: 1.3rem 1.7rem;
+
+    @media screen and (min-width: 48rem) {
+        padding-block: 2.5rem;
+    }
+}
+
+.card__section--result {
+    --gap-row: 1.3rem;
+    padding-inline: 2rem;
+    border-bottom-left-radius: 27px;
+    border-bottom-right-radius: 27px;
+    justify-items: center;
+    background-image: linear-gradient(hsl(var(--grad-bg-start)), hsl(var(--grad-bg-end)));
+    z-index: 1;
+
+    @media screen and (min-width: 48rem) {
+        --gap-row: 1.75rem;
+        padding-inline: 2.75rem;
+        border-radius: 27px;
+    }
+}
+
+.card__result-score {
+    --gap-row: 0rem;
+    --flow-space: 0.4rem;
+    justify-content: center;
+    align-content: center;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    background-image: linear-gradient(hsl(var(--grad-circle-start)), hsl(var(--grad-circle-end)));
+
+    @media screen and (min-width: 48rem) {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.card__result-description-container {
+    --flow-space: 0.5rem;
+
+    @media screen and (min-width: 48rem) {
+        --flow-space: 1rem;
+    }
+}
+
+.card__description-msg {
+    line-height: 1.4;
+}
+
+.card__section--summary {
+    --flow-space: 0rem;
+    --gap-row: 1rem;
+    margin-block-start: -1rem;
+    padding-block-start: 2.4rem;
+    padding-inline: 1.55rem;
+    background-color: hsl(var(--clr-white));
+
+    @media screen and (min-width: 48rem) {
+        --gap-row: 1.5rem;
+        border-top-right-radius: 27px;
+        border-bottom-right-radius: 27px;
+        padding-block-start: 2rem;
+        padding-inline: 2.8rem 2rem;
+        margin-block-start: auto;
+        margin-inline-start: -1rem;
+    }
+}
+
+.card__summary-details {
+    --gap-row: 0.75rem;
+}
+
+.card__summary-score-item {
+    align-items: center;
+    --gap-col: 0.5rem;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding-block: 0.75rem;
+    padding-inline: 0.75rem;
+}
+
+.card__score-item-figure {
+    align-items: center;
+    --gap-col: 0.5rem;
+}
+
+.card__figure-img {
+    width: 15px;
+    height: 15px;
+}
+
+.card__summary-cta {
+    /* Default styles */
+    padding-block: 0.85rem;
+    border-radius: 25px;
+    transition: background-image 500ms ease-in-out;
+
+    &:hover {
+        background-image: linear-gradient(hsl(var(--grad-bg-start)), hsl(var(--grad-bg-end)));
+    }
+
+    &:focus-visible {
+        outline: 3px solid hsl(var(--clr-dark-gray-blue));
+        background-image: linear-gradient(hsl(var(--grad-bg-start)), hsl(var(--grad-bg-end)));
+    }
+
+    /* If the `:focus-visible` pseudo selector is not supported by the browser, then `:focus` is applied as fallback */
+    @supports not selector(:focus-visible) {
+        &:focus {
+            outline: 3px solid hsl(var(--clr-dark-gray-blue));
+            background-image: linear-gradient(hsl(var(--grad-bg-start)), hsl(var(--grad-bg-end)));
+        }
+    }
+
+    @media screen and (min-width: 48rem) {
+        font-size: var(--fs-100);
+        padding-block: 1rem;
+    }
+}
+
+.attribution {
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.attribution__link {
+    /* Default styles */
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 3px;
+    transition: color 500ms ease-in-out;
+
+    &:hover {
+        color: hsl(var(--clr-dark-gray-blue) / 50%);
+    }
+
+    &:focus-visible {
+        color: hsl(var(--clr-dark-gray-blue) / 50%);
+        outline: 2px solid hsl(var(--clr-dark-gray-blue));
+        box-shadow: 0 0 4px hsl(var(--clr-dark-gray-blue));
+    }
+
+    /* If the `:focus-visible` pseudo selector is not supported by the browser, then `:focus` styles are applied as fallback */
+    @supports not selector(:focus-visible) {
+        &:focus {
+            color: hsl(var(--clr-dark-gray-blue) / 50%);
+            outline: 2px solid hsl(var(--clr-dark-gray-blue));
+            box-shadow: 0 0 4px hsl(var(--clr-dark-gray-blue));
+        }
+    }
+}

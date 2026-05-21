@@ -4,8 +4,9 @@ This repo contains solutions to [Free and Free+ challenges](https://www.frontend
 
 ## Challenges
 
-| Title                | Challenge                             |
-| :------------------- | :------------------------------------ |
-| QR code component    | [See solution](/qr-code-component)    |
-| Blog preview card    | [See solution](/blog-preview-card/)   |
-| Social links profile | [See solution](/social-link-profile/) |
+| Title                     | Challenge                                   |
+| :------------------------ | :------------------------------------------ |
+| QR code component         | [See solution](/qr-code-component)          |
+| Blog preview card         | [See solution](/blog-preview-card/)         |
+| Social links profile      | [See solution](/social-link-profile/)       |
+| Results summary component | [See solution](/results-summary-component/) |

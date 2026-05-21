@@ -1,0 +1,56 @@
+import data from "../data.json";
+
+const getColor = (category: string) => {
+    switch (category) {
+        case "Reaction":
+            return "red";
+
+        case "Memory":
+            return "yellow";
+
+        case "Verbal":
+            return "green";
+
+        default:
+            return "blue";
+    }
+};
+
+const getListItem = (category: string, icon: string, score: number, color: string) => {
+    return `
+        <li class="card__summary-score-item bg-primary-${color} flex">
+            <figure class="card__score-item-figure flex">
+                <img
+                    class="card__figure-img"
+                    alt=""
+                    height="20"
+                    width="20"
+                    src="${icon}"
+                />
+                <figcaption class="text-preset-1 text-primary-${color}">
+                    ${category}
+                </figcaption>
+            </figure>
+
+            <p class="fw-bold text-dark-grey-blue--50 text-preset-1">
+                <span class="d-inline-block text-dark-grey-blue m-right">${score}</span> /
+                100
+            </p>
+        </li>    
+`;
+};
+
+const render = () => {
+    const cardSummaryDetails = document.getElementById("card__summary-details");
+
+    let listItems = "";
+
+    data.forEach(
+        d => (listItems += getListItem(d.category, d.icon, d.score, getColor(d.category))),
+    );
+
+    // I think that using Non-Null Assertion is valid because this is a element I control.
+    cardSummaryDetails!.innerHTML = listItems;
+};
+
+render();
