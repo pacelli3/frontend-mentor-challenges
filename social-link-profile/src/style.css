@@ -235,16 +235,16 @@ textarea:not([rows]) {
     color: hsl(var(--clr-green));
 }
 
-.text-gray-700 {
-    color: hsl(var(--clr-gray-700));
+.text-grey-700 {
+    color: hsl(var(--clr-grey-700));
 }
 
-.text-gray-800 {
-    color: hsl(var(--clr-gray-800));
+.text-grey-800 {
+    color: hsl(var(--clr-grey-800));
 }
 
-.text-gray-900 {
-    color: hsl(var(--clr-gray-900));
+.text-grey-900 {
+    color: hsl(var(--clr-grey-900));
 }
 
 .text-white {
