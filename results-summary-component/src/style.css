@@ -136,12 +136,6 @@ ol {
     margin: 0;
 }
 
-/* Set core body defaults */
-body {
-    min-height: 100vh;
-    line-height: 1.5;
-}
-
 /* Set shorter line heights on headings and interactive elements */
 h1,
 h2,
@@ -196,6 +190,7 @@ textarea:not([rows]) {
 }
 
 /* Remove animations for people who've turned them off */
+/* stylelint-disable declaration-no-important */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -206,6 +201,7 @@ textarea:not([rows]) {
         scroll-behavior: auto !important;
     }
 }
+/* stylelint-enable declaration-no-important */
 
 /* ------------------------------------------------------------ */
 /*                        UTILITY CLASSES                       */
@@ -374,6 +370,8 @@ textarea:not([rows]) {
 /* ------------------------------------------------------------ */
 
 body {
+    min-height: 100vh;
+    line-height: 1.5;
     overflow: hidden;
     font-family: var(--ff-sans-serif);
     font-optical-sizing: auto;
