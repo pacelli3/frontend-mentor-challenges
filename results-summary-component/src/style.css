@@ -517,6 +517,9 @@ body {
 
 .attribution {
     align-items: center;
+}
+
+.attribution__credit {
     font-size: 0.875rem;
 }
 
