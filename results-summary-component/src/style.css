@@ -342,7 +342,7 @@ textarea:not([rows]) {
 }
 
 .letter-spacing-1 {
-    letter-spacing: 0.25px;
+    letter-spacing: 0.015625rem;
 }
 
 .text-center {
