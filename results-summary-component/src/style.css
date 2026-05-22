@@ -53,6 +53,7 @@
     --clr-dark-gray-blue: 224 30% 27%;
 
     /* Font sizes */
+    --fs-500: 1.25rem;
     --fs-400: 1.25rem;
     --fs-300: 2.75rem;
     --fs-200: 0.9rem;
@@ -68,6 +69,7 @@
 
     @media screen and (min-width: 48rem) {
         /* Font sizes */
+        --fs-500: 1.5rem;
         --fs-400: 1.5rem;
         --fs-300: 3.5rem;
         --fs-200: 1.25rem;
@@ -372,14 +374,29 @@ textarea:not([rows]) {
 body {
     min-height: 100vh;
     line-height: 1.5;
-    overflow: hidden;
     font-family: var(--ff-sans-serif);
     font-optical-sizing: auto;
     --gap-row: 0;
     --gap-col: 0;
 }
 
-.card {
+.main {
+    flex-direction: column;
+    --gap-row: 0rem;
+    --gap-col: 0rem;
+}
+
+.main__title {
+    margin-block: 0.875rem;
+    line-height: 1.1;
+    font-size: var(--fs-500);
+
+    @media screen and (min-width: 48rem) {
+        margin-block: 1.5rem;
+    }
+}
+
+.main__card {
     margin-inline: auto;
     grid-template-columns: minmax(0, 18.75rem);
 
@@ -515,6 +532,7 @@ body {
 
 .attribution {
     align-items: center;
+    margin-block: 1.5rem;
 }
 
 .attribution__credit {
