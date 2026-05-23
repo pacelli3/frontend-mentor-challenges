@@ -1,0 +1,269 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+    <head>
+        <!-- Display site properly based on user's device -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Metadata -->
+        <title>Frontend Mentor | Social proof section</title>
+        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+
+        <!-- Fonts preloads — requests the necessary fonts in advance to avoid Flash of Unstyle Text (FOUT) -->
+        <link
+            rel="preload"
+            href="src/assets/fonts/league-spartan-v15-latin-regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+
+        <link
+            rel="preload"
+            href="src/assets/fonts/league-spartan-v15-latin-500.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+
+        <link
+            rel="preload"
+            href="src/assets/fonts/league-spartan-v15-latin-700.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="src/style.css" />
+    </head>
+
+    <body>
+        <main class="main container grid">
+            <div class="main__container grid">
+                <section class="intro-section grid">
+                    <h1 class="intro-section__title fw-bold letter-spacing-1 text-dark-magenta">
+                        10,000+ of our users love our products.
+                    </h1>
+                    <p class="intro-section__description fw-mid text-center text-dark-gray-magenta">
+                        We only provide great products combined with excellent customer service. See
+                        what our satisfied customers are saying about our services.
+                    </p>
+                </section>
+
+                <section class="review-section">
+                    <h2 class="sr-only">App reviews.</h2>
+                    <ul class="review-section__list grid">
+                        <li class="review-section__item bg-light-gray-magenta flex translate-x-2">
+                            <div class="review-section__stars flex">
+                                <img
+                                    alt=""
+                                    class="review-section__star"
+                                    height="16"
+                                    width="17"
+                                    src="/src/assets/images/icon-star.svg"
+                                />
+                                <img
+                                    alt=""
+                                    class="review-section__star"
+                                    height="16"
+                                    width="17"
+                                    src="/src/assets/images/icon-star.svg"
+                                />
+                                <img
+                                    alt=""
+                                    class="review-section__star"
+                                    height="16"
+                                    width="17"
+                                    src="/src/assets/images/icon-star.svg"
+                                />
+                                <img
+                                    alt=""
+                                    class="review-section__star"
+                                    height="16"
+                                    width="17"
+                                    src="/src/assets/images/icon-star.svg"
+                                />
+                                <img
+                                    alt=""
+                                    class="review-section__star"
+                                    height="16"
+                                    width="17"
+                                    src="/src/assets/images/icon-star.svg"
+                                />
+                            </div>
+                            <p class="fw-bold text-dark-magenta">Rated 5 stars in Reviews</p>
+                        </li>
+                        <li class="review-section__item bg-light-gray-magenta flex translate-x-1">
+                            <div class="review-section__stars flex">
+                                <img
+                                    alt=""
+                                    class="review-section__star"
+                                    height="16"
+                                    width="17"
+                                    src="/src/assets/images/icon-star.svg"
+                                />
+                                <img
+                                    alt=""
+                                    class="review-section__star"
+                                    height="16"
+                                    width="17"
+                                    src="/src/assets/images/icon-star.svg"
+                                />
+                                <img
+                                    alt=""
+                                    class="review-section__star"
+                                    height="16"
+                                    width="17"
+                                    src="/src/assets/images/icon-star.svg"
+                                />
+                                <img
+                                    alt=""
+                                    class="review-section__star"
+                                    height="16"
+                                    width="17"
+                                    src="/src/assets/images/icon-star.svg"
+                                />
+                                <img
+                                    alt=""
+                                    class="review-section__star"
+                                    height="16"
+                                    width="17"
+                                    src="/src/assets/images/icon-star.svg"
+                                />
+                            </div>
+                            <p class="fw-bold text-dark-magenta">Rated 5 stars in Report Guru</p>
+                        </li>
+                        <li class="review-section__item bg-light-gray-magenta flex">
+                            <div class="review-section__stars flex">
+                                <img
+                                    alt=""
+                                    class="review-section__star"
+                                    height="16"
+                                    width="17"
+                                    src="/src/assets/images/icon-star.svg"
+                                />
+                                <img
+                                    alt=""
+                                    class="review-section__star"
+                                    height="16"
+                                    width="17"
+                                    src="/src/assets/images/icon-star.svg"
+                                />
+                                <img
+                                    alt=""
+                                    class="review-section__star"
+                                    height="16"
+                                    width="17"
+                                    src="/src/assets/images/icon-star.svg"
+                                />
+                                <img
+                                    alt=""
+                                    class="review-section__star"
+                                    height="16"
+                                    width="17"
+                                    src="/src/assets/images/icon-star.svg"
+                                />
+                                <img
+                                    alt=""
+                                    class="review-section__star"
+                                    height="16"
+                                    width="17"
+                                    src="/src/assets/images/icon-star.svg"
+                                />
+                            </div>
+                            <p class="fw-bold text-dark-magenta">Rated 5 stars in BestTech</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <section class="testimonials-section">
+                <h2 class="sr-only">User testimonials.</h2>
+                <ul class="testimonials-section__list grid">
+                    <li>
+                        <figure class="testimonials-section__figure bg-dark-magenta flow">
+                            <figcaption class="testimonials-section__caption flex">
+                                <img
+                                    alt=""
+                                    class="testimonials-section__avatar"
+                                    height="80"
+                                    width="80"
+                                    src="src/assets/images/image-colton.jpg"
+                                />
+                                <div class="testimonials-section__info flow">
+                                    <p class="text-light-gray-magenta">Colton Smith</p>
+                                    <p class="text-soft-pink">Verified buyer</p>
+                                </div>
+                            </figcaption>
+
+                            <blockquote>
+                                <p class="testimonials-section__message text-light-gray-magenta">
+                                    We needed the same printed design as the one we had ordered a
+                                    week prior. Not only did they find the original order, but we
+                                    also received it in time. Excellent!
+                                </p>
+                            </blockquote>
+                        </figure>
+                    </li>
+
+                    <li>
+                        <figure
+                            class="testimonials-section__figure bg-dark-magenta flow translate-y-1"
+                        >
+                            <figcaption class="testimonials-section__caption flex">
+                                <img
+                                    alt=""
+                                    class="testimonials-section__avatar"
+                                    height="80"
+                                    width="80"
+                                    src="src/assets/images/image-irene.jpg"
+                                />
+                                <div class="testimonials-section__info flow">
+                                    <p class="text-light-gray-magenta">Irene Roberts</p>
+                                    <p class="text-soft-pink">Verified buyer</p>
+                                </div>
+                            </figcaption>
+
+                            <blockquote>
+                                <p class="testimonials-section__message text-light-gray-magenta">
+                                    Customer service is always excellent and very quick turn around.
+                                    Completely delighted with the simplicity of the purchase and the
+                                    speed of delivery
+                                </p>
+                            </blockquote>
+                        </figure>
+                    </li>
+
+                    <li>
+                        <figure
+                            class="testimonials-section__figure bg-dark-magenta flow translate-y-2"
+                        >
+                            <figcaption class="testimonials-section__caption flex">
+                                <img
+                                    alt=""
+                                    class="testimonials-section__avatar"
+                                    height="80"
+                                    width="80"
+                                    src="src/assets/images/image-anne.jpg"
+                                />
+                                <div class="testimonials-section__info flow">
+                                    <p class="text-light-gray-magenta">Anne Wallace</p>
+                                    <p class="text-soft-pink">Verified buyer</p>
+                                </div>
+                            </figcaption>
+
+                            <blockquote>
+                                <p class="testimonials-section__message text-light-gray-magenta">
+                                    Put and order with this company and can only praise them for the
+                                    very hight standard. Will definitely use them again and
+                                    recommend them to everyone!
+                                </p>
+                            </blockquote>
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>
