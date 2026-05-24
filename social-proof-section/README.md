@@ -58,8 +58,8 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: [Check]()
-- Live Site URL: [Check]()
+- Solution URL: [Check](https://www.frontendmentor.io/solutions/responsive-social-proof-section-with-html-and-css-B1DpbGGTz7)
+- Live Site URL: [Check](https://social-proof-section-pacelli3.netlify.app/)
 
 ## My process
 
