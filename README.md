@@ -10,3 +10,4 @@ This repo contains solutions to [Free and Free+ challenges](https://www.frontend
 | Blog preview card         | [See solution](/blog-preview-card/)         |
 | Social links profile      | [See solution](/social-link-profile/)       |
 | Results summary component | [See solution](/results-summary-component/) |
+| Social proof section      | [See solution](/social-proof-section/)      |
