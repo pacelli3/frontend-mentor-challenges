@@ -65,8 +65,8 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: [Check]()
-- Live Site URL: [Check]()
+- Solution URL: [Check](https://www.frontendmentor.io/solutions/responsive-and-accessible-contact-form-with-html-css-and-typescript-M3ZQyKaJrr)
+- Live Site URL: [Check](https://contact-form-pacelli3.netlify.app/)
 
 ## My process
 
@@ -205,6 +205,7 @@ I used the following resources to help me with this design:
 - [Element: blur event](https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event)
 - [HTMLFormElement: submit event](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event)
 - [Form validation - When should error messages be triggered?](https://ux.stackexchange.com/a/74541)
+- [Toasts are Bad UX](https://maxschmitt.me/posts/toasts-bad-ux)
 
 ### AI Collaboration
 
