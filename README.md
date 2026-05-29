@@ -11,3 +11,4 @@ This repo contains solutions to [Free and Free+ challenges](https://www.frontend
 | Social links profile      | [See solution](/social-link-profile/)       |
 | Results summary component | [See solution](/results-summary-component/) |
 | Social proof section      | [See solution](/social-proof-section/)      |
+| Contact form              | [See solution](/contact-form/)              |
