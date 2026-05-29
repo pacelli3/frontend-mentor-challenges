@@ -1,0 +1,510 @@
+/* ------------------------------------------------------------ */
+/*                           FONT FACE                          */
+/* ------------------------------------------------------------ */
+
+/* karla-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Karla";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../assets/fonts/karla-v33-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* karla-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Karla";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../assets/fonts/karla-v33-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* ------------------------------------------------------------ */
+/*                       CUSTOM PROPERTIES                      */
+/* ------------------------------------------------------------ */
+
+:root {
+    /* Primary colors */
+    --clr-green-200: 148 38% 91%;
+    --clr-green-600: 169 82% 27%;
+    --clr-red: 0 66% 54%;
+
+    /* Neutral colors */
+    --clr-white: 0 0% 100%;
+    --clr-grey-500: 186 15% 59%;
+    --clr-grey-900: 187 24% 22%;
+
+    /* Font sizes */
+    --fs-400: 1rem;
+    --fs-300: 1.6rem;
+    --fs-200: 1.125rem;
+    --fs-100: 0.9rem;
+
+    /* Font families */
+    --fs-sans-serif: "Karla", sans-serif;
+
+    /* Font weights */
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+/* ------------------------------------------------------------ */
+/*                            RESETS                            */
+/* ------------------------------------------------------------ */
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+picture,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Sets a global font weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* Makes images easier to work with */
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Makes it easy to work with radio buttons */
+input {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+}
+
+/* Button rules */
+button {
+    cursor: pointer;
+    background: none;
+    border: 0;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+/* Removes default border */
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+/* Makes textarea easy to work with */
+
+textarea {
+    resize: none;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* Remove animations for people who've turned them off */
+/* stylelint-disable declaration-no-important */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+/* stylelint-enable declaration-no-important */
+
+/* ------------------------------------------------------------ */
+/*                        UTILITY CLASSES                       */
+/* ------------------------------------------------------------ */
+
+/* Colors */
+
+.bg-green-200 {
+    background-color: hsl(var(--clr-green-200));
+}
+
+.bg-green-600 {
+    background-color: hsl(var(--clr-green-600));
+}
+
+.bg-grey-900 {
+    background-color: hsl(var(--clr-grey-900));
+}
+
+.bg-white {
+    background-color: hsl(var(--clr-white));
+}
+
+.text-green-600 {
+    color: hsl(var(--clr-green-600));
+}
+
+.text-grey-900 {
+    color: hsl(var(--clr-grey-900));
+}
+
+.text-red {
+    color: hsl(var(--clr-red));
+}
+
+.text-white {
+    color: hsl(var(--clr-white));
+}
+
+/* General */
+
+.container {
+    max-width: 90rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+
+.m-left {
+    margin-inline-start: 0.25rem;
+}
+
+.m-bottom {
+    margin-block-end: 0.6rem;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap-row, 1rem) var(--gap-col, 1rem);
+}
+
+.flow > * + * {
+    margin-block-start: var(--flow-space, 0.55rem);
+}
+
+.sr-only {
+    position: absolute;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    padding: 0;
+    margin: -0.0625rem;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.w-full {
+    width: 100%;
+}
+
+/* Typography */
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.fs-100 {
+    font-size: var(--fs-100);
+}
+
+.fs-200 {
+    font-size: var(--fs-200);
+}
+
+.fs-300 {
+    font-size: var(--fs-300);
+}
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+
+.fw-regular {
+    font-weight: var(--fw-regular);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+/* ------------------------------------------------------------ */
+/*                          COMPONENTS                          */
+/* ------------------------------------------------------------ */
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: var(--fs-sans-serif);
+    font-optical-sizing: auto;
+}
+
+.main {
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    margin-inline: auto;
+}
+
+.toast {
+    --flow-space: 0.75rem;
+    padding-block: 1.5rem;
+    padding-inline: 1.5rem;
+    margin-inline: auto;
+    max-width: 425px;
+    flex-direction: column;
+    border-radius: 0.625rem;
+}
+
+.toast__heading {
+    align-items: center;
+    --gap-col: 0.25rem;
+}
+
+.toast__icon {
+    height: 1.125rem;
+    width: 1.5rem;
+}
+
+.toast__message {
+    line-height: 1.1;
+}
+
+.form {
+    flex-direction: column;
+    border-radius: 0.625rem;
+    padding-block: 1.3rem;
+    padding-inline: 1.5rem;
+    margin-inline: auto;
+    max-width: 36.875rem;
+    --gap-row: 1.1rem;
+
+    @media screen and (min-width: 35rem) {
+        padding-block: 2rem;
+        padding-inline: 2.2rem;
+    }
+}
+
+.form__heading {
+    letter-spacing: -0.0625rem;
+}
+
+.form__fieldset {
+    flex-direction: column;
+    --gap-row: 1.5rem;
+}
+
+.form__container {
+    flex-direction: column;
+    --gap-row: 1.5rem;
+
+    @media screen and (min-width: 35rem) {
+        flex-direction: row;
+    }
+}
+
+.form__container-consent {
+    margin-block-start: 0.5rem;
+    --flow-space: 0.4rem;
+}
+
+.form__label {
+    cursor: pointer;
+    padding-block: 0.755rem;
+    padding-inline: 1rem;
+    align-items: center;
+    outline: 0.09375rem solid hsl(var(--clr-grey-900));
+    transition: outline 500ms ease-in-out;
+    border-radius: 0.3125rem;
+
+    &:hover {
+        outline: 0.09375rem solid hsl(var(--clr-green-600));
+    }
+
+    &:focus-within {
+        background-color: hsl(var(--clr-green-200));
+    }
+}
+
+.consent__container {
+    align-items: center;
+    outline: 0;
+    border-radius: 0;
+
+    &:hover {
+        outline: 0;
+    }
+
+    &:focus-within {
+        background-color: transparent;
+    }
+}
+
+.form__control {
+    cursor: pointer;
+    border: 0;
+    border-radius: 0.3125rem;
+    padding-block: 0.7rem;
+    padding-inline: 1rem;
+    outline: 0.09375rem solid hsl(var(--clr-grey-900));
+    transition: outline 500ms ease-in-out;
+
+    &:hover {
+        outline-color: hsl(var(--clr-green-600));
+    }
+
+    &:focus-visible {
+        background-color: hsl(var(--clr-green-200));
+    }
+
+    @supports not selector(:focus-visible) {
+        &:focus {
+            background-color: hsl(var(--clr-green-200));
+        }
+    }
+}
+
+.form__control-textarea {
+    &:not([rows]) {
+        min-height: 12.5rem;
+    }
+
+    @media screen and (min-width: 35rem) {
+        &:not([rows]) {
+            min-height: 6rem;
+        }
+    }
+}
+
+.form__control--error {
+    outline-color: hsl(var(--clr-red));
+}
+
+.form__checkbox {
+    border-radius: 0;
+    accent-color: hsl(var(--clr-green-600));
+    width: 0.9375rem;
+    height: 0.9375rem;
+}
+
+.form__radio {
+    outline: 0;
+    accent-color: hsl(var(--clr-green-600));
+    width: 0.9375rem;
+    height: 0.9375rem;
+}
+
+.form__btn {
+    border-radius: 0.3125rem;
+    margin-block-start: 0.85rem;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    transition: background-color 500ms ease-in-out;
+
+    &:disabled {
+        opacity: 90%;
+        cursor: not-allowed;
+    }
+
+    &:hover {
+        background-color: hsl(var(--clr-grey-900));
+    }
+
+    &:focus-visible {
+        outline: 4px solid hsl(var(--clr-grey-900));
+    }
+
+    @supports not selector(:focus-visible) {
+        &:focus {
+            outline: 4px solid hsl(var(--clr-grey-900));
+        }
+    }
+}
