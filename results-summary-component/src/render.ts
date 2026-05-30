@@ -26,10 +26,7 @@ const getListItem = (category: string, url: string, score: number, color: string
 
         <p class="fw-bold text-dark-grey-blue--50 text-preset-1">
             <span class="d-inline-block text-dark-grey-blue m-right">${score}</span>
-            <span aria-hidden="true">/</span>
-            <span class="sr-only">out of</span>
-            100
-            <span class="sr-only">.</span>
+            <span aria-hidden="true">/ 100</span>
         </p>
     </li>    
 `;
