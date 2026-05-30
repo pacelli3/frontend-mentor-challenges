@@ -112,32 +112,10 @@ For the description I considered to use a `<q>` element due to the quotes, but I
 </figcaption>
 ```
 
-For the links list I used a unordered list (`<ul>`) and each list item (`<li>`) contained an anchored tag (`<a>`).
+For the links list I created a navigation landmark (`<nav>`) with an unordered list (`<ul>`) and each list item (`<li>`) contained an anchored tag (`<a>`) with the link to the respective profile.
 
 ```html
-<ul>
-    <li><a href="to">site</a></li>
-    <li><a href="to">site</a></li>
-    <li><a href="to">site</a></li>
-    <li><a href="to">site</a></li>
-    <li><a href="to">site</a></li>
-</ul>
-```
-
-Final markup:
-
-```html
-<article>
-    <figure>
-        <img src="path_to_avatar" />
-
-        <figcaption>
-            <h1>title</h1>
-            <address>address</address>
-            <p>description</p>
-        </figcaption>
-    </figure>
-
+<nav>
     <ul>
         <li><a href="to">site</a></li>
         <li><a href="to">site</a></li>
@@ -145,7 +123,7 @@ Final markup:
         <li><a href="to">site</a></li>
         <li><a href="to">site</a></li>
     </ul>
-</article>
+</nav>
 ```
 
 #### Syndication
