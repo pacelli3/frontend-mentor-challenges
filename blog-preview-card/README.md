@@ -13,8 +13,6 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
     - [Useful resources](#useful-resources)
-    - [AI Collaboration](#ai-collaboration)
-    - [Improvements](#improvements)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 - [License](#license)
@@ -79,7 +77,7 @@ This is a small and simple project consisting of building a blog preview card.
 
 The styling and layout is in my opinion the easiest part of this project, because we can group the entire content of the card in a container and set the layout to a single column where each element will stack on top of each other. This can be easily achieved using Flexbox or CSS Grid.
 
-Imagine this is the markup:
+Imagine this is the initial markup:
 
 ```html
 <div class="container">
@@ -118,6 +116,34 @@ Single column with CSS Grid:
 
 After having the correct layout we can apply the styling &mdash; colors, spacing, font sizes, font family, gap, padding, margins, etc.
 
+#### Layout shifts and accessibility
+
+The initial markup has a few problems that affect both layout and accessibility:
+
+1. Omitting the `height` and `width` attributes on the `<img>` elements: this could lead to the site to suffer from Cumulative Layout Shift (CLS), where users might encounter unexpected layout shifts that are not from the result of their actions. The solution is to set the attributes to the initial values an later change them with CSS
+2. Setting the `alt` attribute on the banner: this illustration is used purely as decoration. It's better to set the attribute to an empty string so the `<img>` is ignored by screen readers
+3. When a screen reader gets to the avatar it will announce _Photo of the author: Greg Hooper. greg hooper_ the name of the author is repeated because it appears in both `alt` attribute and the `<p>` element. It's better to set the `alt` attribute to an empty string so the `<img>` is ignored by screen readers
+
+```html
+<!-- Banner -->
+<img
+    class="post-img"
+    src="/src/assets/images/illustration-article.svg"
+    alt=""
+    height="201"
+    width="336"
+/>
+
+<!-- Avatar -->
+<img
+    class="author-avatar"
+    src="/src/assets/images/image-avatar.webp"
+    alt=""
+    height="65"
+    width="64"
+/>
+```
+
 #### Semantic HTML
 
 Using a `<div>` as the container, its convenient because it help us to group content and apply the styling, but a `<div>` is a generic container that does not convey meaningful meaning or purpose about of its content and should only be used when:
@@ -127,11 +153,7 @@ Using a `<div>` as the container, its convenient because it help us to group con
 
 We could replace the `<div>` with a `<section>` or a `<main>`, but the same problem remains &mdash; these elements are not semantically correct.
 
-Next I will explain what are, in my opinion, the correct HTML elements for each of the children in the card:
-
-#### Container
-
-This should be an `<article>` element, from the HTML Standard:
+For the container I used an `<article>` element, because the component has meaning by itself, it does not need the context of the webpage. From the HTML standard:
 
 > The article element represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
 
@@ -139,31 +161,96 @@ I don't fully understand what all of this means, but what I understood is: whate
 
 A `<section>` will not work either because this is another type of generic container that should not be used when an `<article>` makes sense.
 
-#### Post banner
+For the rest of the elements:
 
-Using an `<img>` is the only choice because this represents an illustration and its meaning is not necessarily derived from the content, we only need to add the `alt` attribute.
+- Post banner: Using an `<img>` is the only choice because this represents an illustration and its meaning is not necessarily derived from the content, we only need to add the `alt` attribute.
+- Badge: This is used to indicate the category of the post, here I used a `<span>` element because is more of a decorative indicator, rather than part of the content.
+- Date: Here I use a nested `<time>` element, with its `datetime` attribute, inside inside a `<p>` element.
+- Title: `<article>` elements should always contain a heading. I used an `<h1>`, because the card in the only content in the app, but in a real-app we should use a smaller heading, e.g. a `<h2>` or `<h3>`.
+- Description: Here I used a `<p>` element. This is a straightforward choice.
+- Author information: At the beginning I was tempted to use an `<address>` element but this should be used to display **contact information** of the author, but here we need to display the name and an avatar, therefore I decided to use a `<figure>` and a `<figcaption>` elements.
 
-#### Badge
+#### Card as an entire link or not?
 
-This is used to indicate the category of the post, here I used a `<span>` element because is more of a decorative indicator, rather than part of the content.
+Initially, after debating with DeepSeek, I decided to make the entire surface of the card as the link by using a 'stretched link', but this could end up affecting UX by accidentally triggering a page jumps.
 
-#### Date
+```css
+/* 'Stretched Link' CSS rule */
+.card-link::after {
+    content: "";
+    position: absolute;
+    inset: 0; /* Makes it cover the entire surface of the card (drop-shadow excluded) */
+}
+```
 
-Here I use a nested `<time>` element, with its `datetime` attribute, inside inside a `<p>` element.
+Typically, links are associated with text or buttons, but not with an entire container. At the end I decided not stretched link and instead use the the title of the card as the link.
 
-#### Title
+```html
+<h1>
+    <a href="#">HTML & CSS foundations</a>
+</h1>
+```
 
-`<article>` elements should always contain a heading. I used an `<h1>`, because the card in the only content in the app, but in a real-app we should use a smaller heading, e.g. a `<h2>` or `<h3>`.
+#### Self-host fonts
 
-#### Description
+Initially, I was linking the fonts from Google Fonts API using the `<link>` element:
 
-Here I used a `<p>` element. This is a straightforward choice.
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap"
+    rel="stylesheet"
+/>
+```
 
-#### Author information
+I learned that this approach can raise privacy concerns because this could force users into sharing information they don't want and may conflict with regulations such as the European Union's General Data Protection Regulation (GDPR).
 
-At the beginning I was tempted to use an `<address>` element but this should be used to display **contact information** of the author, but here we need to display the name and an avatar, therefore I decided to use a `<figure>` and a `<figcaption>` elements.
+I was recommended to remove the links and instead self-host the fonts using `@font-face` in my CSS file, this enables the following advantages:
 
-The final markup is in [`index.html`](./index.html).
+- This method protects your user's privacy since files are 100% under your domain and not from third-party requests
+- This also allows you to explicitly use the woff2 font type which is the modern best practice choice for web fonts
+- Could speed up loading times
+
+```css
+@font-face {
+    font-display: swap;
+    font-family: "Figtree";
+    font-style: normal;
+    font-weight: 500;
+    src: url("./assets/fonts/static/figtree-v9-latin-500.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Figtree";
+    font-style: normal;
+    font-weight: 800;
+    src: url("./assets/fonts/static/figtree-v9-latin-800.woff2") format("woff2");
+}
+```
+
+This approach can be further improved by preloading the fonts to reduce FOUT (Flash of Unstyled Text), where the fallback fonts briefly appear before the intended fonts are applied.
+
+```html
+<link
+    rel="preload"
+    href="/src/assets/fonts/static/figtree-v9-latin-500.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+/>
+
+<link
+    rel="preload"
+    href="/src/assets/fonts/static/figtree-v9-latin-800.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+/>
+```
+
+Check the final markup at [`index.html`](./index.html).
 
 ### Useful resources
 
@@ -174,71 +261,6 @@ I used the following resources to dive deeper into certain HTML elements to unde
 - [`<div>` HTML content division element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/div)
 - [`<section>` HTML generic section element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section)
 - [The article element](https://html.spec.whatwg.org/multipage/sections.html#the-article-element) - Link to the HTML specification
-
-### AI Collaboration
-
-I used DeepSeek to brainstorm a solution to determine how make the `<article>` a link. Typically, cards act as previews to the actual content and clicking on them will redirect us to the content.
-
-At the beginning I thought of wrapping the entire article inside anchor tags, but DeepSeek explained to me this would end up affecting the accesibility of the card, because the entire content will be read to users that rely on assistive technologies.
-
-Assume this is the card markup:
-
-```html
-<a href="#">
-    <article class="container">
-        <img src="path_to_illustration" alt="blog card image." />
-        <span>Learning</span>
-        <p>Published 21 Dec 2023</p>
-        <h1>HTML & CSS foundations</h1>
-        <p>
-            These languages are the backbone of every website, defining structure, content, and
-            presentation.
-        </p>
-
-        <figure>
-            <img src="path_to_img" alt="Photo of the author: Greg Hooper." />
-            <figcaption>Greg Hooper</figcaption>
-        </figure>
-    </article>
-</a>
-```
-
-The screen reader will read to the user:
-
-> blog card image. Learning Published 21 Dec 2023 HTML & CSS foundations These languages are the backbone of every website, defining structure, content, and presentation. Photo of the author: Greg Hooper. Greg Hooper
-
-Which does not makes any sense.
-
-Instead, is better to use a "Stretched Link":
-
-1. Remove the anchor tag that is wrapping the article
-2. Nest an anchor tag inside the title of the card
-3. Apply styling to enlarge the surface of the anchor tag to cover the entire surface of the cards
-
-```html
-<h1>
-    <a href="#">HTML & CSS foundations</a>
-</h1>
-```
-
-```css
-article {
-    position: relative;
-    /* The rest of the styles... */
-}
-
-article a::after {
-    content: "";
-    position: absolute;
-    inset: 0; /* The magic is here: this makes it cover the entire surface of the card (drop-shadow excluded) */
-}
-```
-
-With these changes "HTML & CSS foundations" is what will be read to the user.
-
-### Improvements
-
-To avoid cluttering the file with too much information, the improvents can be read in [IMPROVEMENTS.md](IMPROVEMENTS.md).
 
 ## Author
 
@@ -253,8 +275,6 @@ Thanks to [Elmar Chavez (@CodingWithJiro)](https://www.frontendmentor.io/profile
 - reducing Flash of Unstyled Text (FOUT)
 - responsive design,
 - commentary on semantic HTML
-
-Improvements recommended by Elmar are explained in the [Improvements](#improvements) section.
 
 ## License
 
