@@ -94,7 +94,7 @@ With this combination is possible to easily give the component the correct struc
 </figure>
 ```
 
-We can replace the `<section>` for a `<figure>` and the `<div>` for a `<figcaption>` to achieve the same structure, but with this combination we do more than just keeping the same layout, we can also guarantee the best semantic correctness, because of how the `<figure>` and `<figcaption>` elements combine together.
+We can replace the `<section>` for a `<figure>` and the `<div>` for a `<figcaption>` to achieve the same structure, but with this combination we do more than just keeping the same layout, we can also guarantee semantic correctness, because of how the `<figure>` and `<figcaption>` elements combine together. By doing the `alt` attribute on the `<img>` should be set to an empty string because the intructions convey enough context to understand how to use the component.
 
 The `<figure>` HTML tag represents a self-contained element, typically, used to place illustrations in the web document and with the `<figcaption>` element we can associated a caption.
 
