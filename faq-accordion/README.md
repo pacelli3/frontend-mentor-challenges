@@ -56,8 +56,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Check]()
-- Live Site URL: [Check]()
+- Solution URL: [Check](https://www.frontendmentor.io/solutions/responsive-and-accessible-faq-accordion-component-with-html-css-and-ts-pbV7kv_Kv1)
+- Live Site URL: [Check](https://faq-accordion-pacelli3.netlify.app/)
 
 ## My process
 
