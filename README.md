@@ -12,3 +12,4 @@ This repo contains solutions to [Free and Free+ challenges](https://www.frontend
 | Results summary component | [See solution](/results-summary-component/) |
 | Social proof section      | [See solution](/social-proof-section/)      |
 | Contact form              | [See solution](/contact-form/)              |
+| FAQ accordion             | [See solution](/faq-accordion/)             |
