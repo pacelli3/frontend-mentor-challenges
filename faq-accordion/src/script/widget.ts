@@ -1,3 +1,6 @@
+import iconMinus from "../assets/images/icon-minus.svg";
+import iconPlus from "../assets/images/icon-plus.svg";
+
 document.querySelectorAll("details").forEach(details => {
     details.addEventListener("toggle", (e: ToggleEvent) => {
         const liveRegion = document.getElementById("liveregion") as HTMLDivElement;
@@ -8,9 +11,9 @@ document.querySelectorAll("details").forEach(details => {
         if (detailsEl.open) {
             // Only update ARIA live region when `<details>` is expanded.
             liveRegion.textContent = paragraph.textContent;
-            icon.src = "src/assets/images/icon-minus.svg";
+            icon.src = iconMinus;
         } else {
-            icon.src = "src/assets/images/icon-plus.svg";
+            icon.src = iconPlus;
         }
     });
 });
