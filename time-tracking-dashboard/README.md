@@ -69,8 +69,8 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: [Check]()
-- Live Site URL: [Check]()
+- Solution URL: [Check](https://www.frontendmentor.io/solutions/multi-page-time-tracking-dashboard-with-vite-oK1OyPNR1A)
+- Live Site URL: [Check](https://time-tracking-dashboard-pacelli3.netlify.app/)
 
 ## My process
 
@@ -169,6 +169,7 @@ Example:
 2. Add functionality to the app: filtering, deleting and adding new cards
 3. Add support for dark/light mode
 4. Find a way to reduce of images in Markdown without using the `<img>` element
+5. Replace move rewrites from `_rewrites` file to `netlify.toml`
 
 ### Useful resources
 
