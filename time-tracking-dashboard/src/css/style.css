@@ -337,8 +337,8 @@ body {
         "header"
         "list";
 
-    @media screen and (min-width: 800px) {
-        grid-template-columns: 205px 1fr;
+    @media screen and (min-width: 50rem) {
+        grid-template-columns: 12.8125rem 1fr;
         grid-template-areas: "header list";
     }
 }
@@ -425,7 +425,7 @@ body {
 .cards-list {
     grid-area: list;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12.8125rem, 1fr));
 }
 
 .list__card {
