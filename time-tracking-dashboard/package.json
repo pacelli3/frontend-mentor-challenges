@@ -1,0 +1,19 @@
+{
+    "name": "time-tracking-dashboard",
+    "description": "Solution to the Time Tracking Dashboard challenge from Frontend Mentor",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "netlify serve",
+        "prettier:fix": "prettier . --write",
+        "prettier:check": "prettier . --check"
+    },
+    "devDependencies": {
+        "@types/node": "^25.9.1",
+        "prettier": "3.8.3",
+        "typescript": "6.0.2",
+        "vite": "8.0.12"
+    }
+}

@@ -1,0 +1,334 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+    <head>
+        <!-- Display site properly based on user's device -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Metadata -->
+        <title>Frontend Mentor | Time tracking dashboard</title>
+        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+
+        <!-- Fonts preloads — requests the necessary fonts in advance to avoid Flash of Unstyle Text (FOUT) -->
+        <link
+            rel="preload"
+            href="src/assets/fonts/rubik-v31-latin-300.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+
+        <link
+            rel="preload"
+            href="src/assets/fonts/rubik-v31-latin-regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+
+        <link
+            rel="preload"
+            href="src/assets/fonts/rubik-v31-latin-500.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="src/css/style.css" />
+    </head>
+
+    <body class="bg-navy-950 grid">
+        <main>
+            <div class="container max-w-container grid">
+                <header class="header bg-navy-900">
+                    <div class="header__container bg-purple-600 flex">
+                        <img
+                            alt=""
+                            class="header__avatar"
+                            src="src/assets/images/image-jeremy.png"
+                        />
+                        <h1 class="header__heading flex">
+                            <span class="fs-100 text-navy-200">Report for</span>
+                            <span class="fs-400 fw-thin text-white">Jeremy Robson</span>
+                        </h1>
+                    </div>
+
+                    <nav>
+                        <ul class="header__link-list flex">
+                            <li>
+                                <a
+                                    class="header__link header__link--active fs-200 fw-thin text-purple-500"
+                                    href="/"
+                                    >Daily</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="header__link fs-200 fw-thin text-purple-500"
+                                    href="/weekly"
+                                    >Weekly</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="header__link fs-200 fw-thin text-purple-500"
+                                    href="/monthly"
+                                    >Monthly</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <ul class="cards-list grid">
+                    <li class="list__card grid">
+                        <div class="card__top card__top--work"></div>
+                        <div class="card__bottom bg-navy-900">
+                            <header class="card__header flex">
+                                <h2 class="fs-200 text-white">Work</h2>
+
+                                <button>
+                                    <span class="sr-only">Menu</span>
+
+                                    <svg
+                                        aria-hidden="true"
+                                        class="header__icon"
+                                        width="21"
+                                        height="5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                                            fill-rule="evenodd"
+                                        />
+                                    </svg>
+                                </button>
+                            </header>
+
+                            <div class="card__time-container flex">
+                                <p class="fs-500 text-white fw-thin">
+                                    <time datetime="PT5H">
+                                        <span aria-hidden="true">5hrs</span>
+                                        <span class="sr-only">5 hours</span>
+                                    </time>
+                                </p>
+                                <p class="fs-100 fs-thin text-navy-200">
+                                    Yesterday &mdash;
+                                    <time datetime="PT7H">
+                                        <span aria-hidden="true">7hrs</span>
+                                        <span class="sr-only">7 hours</span>
+                                    </time>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list__card grid">
+                        <div class="card__top card__top--play"></div>
+                        <div class="card__bottom bg-navy-900">
+                            <header class="card__header flex">
+                                <h2 class="fs-200 text-white">Play</h2>
+                                <button>
+                                    <span class="sr-only">Menu</span>
+
+                                    <svg
+                                        aria-hidden="true"
+                                        class="header__icon"
+                                        width="21"
+                                        height="5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                                            fill-rule="evenodd"
+                                        />
+                                    </svg>
+                                </button>
+                            </header>
+
+                            <div class="card__time-container flex">
+                                <p class="fs-500 text-white fw-thin">
+                                    <time datetime="PT1H">
+                                        <span aria-hidden="true">1hrs</span>
+                                        <span class="sr-only">1 hours</span>
+                                    </time>
+                                </p>
+                                <p class="fs-100 fs-thin text-navy-200">
+                                    Yesterday &mdash;
+                                    <time datetime="PT2H">
+                                        <span aria-hidden="true">2hrs</span>
+                                        <span class="sr-only">2 hours</span>
+                                    </time>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list__card grid">
+                        <div class="card__top card__top--study"></div>
+                        <div class="card__bottom bg-navy-900">
+                            <header class="card__header flex">
+                                <h2 class="fs-200 text-white">Study</h2>
+
+                                <button>
+                                    <span class="sr-only">Menu</span>
+
+                                    <svg
+                                        aria-hidden="true"
+                                        class="header__icon"
+                                        width="21"
+                                        height="5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                                            fill-rule="evenodd"
+                                        />
+                                    </svg>
+                                </button>
+                            </header>
+
+                            <div class="card__time-container flex">
+                                <p class="fs-500 text-white fw-thin">
+                                    <time datetime="PT0H">
+                                        <span aria-hidden="true">0hrs</span>
+                                        <span class="sr-only">0 hours</span>
+                                    </time>
+                                </p>
+                                <p class="fs-100 fs-thin text-navy-200">
+                                    Yesterday &mdash;
+                                    <time datetime="PT1H">
+                                        <span aria-hidden="true">1hrs</span>
+                                        <span class="sr-only">1 hours</span>
+                                    </time>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list__card grid">
+                        <div class="card__top card__top--exercise"></div>
+                        <div class="card__bottom bg-navy-900">
+                            <header class="card__header flex">
+                                <h2 class="fs-200 text-white">Exercise</h2>
+
+                                <button>
+                                    <span class="sr-only">Menu</span>
+
+                                    <svg
+                                        aria-hidden="true"
+                                        class="header__icon"
+                                        width="21"
+                                        height="5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                                            fill-rule="evenodd"
+                                        />
+                                    </svg>
+                                </button>
+                            </header>
+
+                            <div class="card__time-container flex">
+                                <p class="fs-500 text-white fw-thin">
+                                    <time datetime="PT1H">
+                                        <span aria-hidden="true">1hrs</span>
+                                        <span class="sr-only">1 hours</span>
+                                    </time>
+                                </p>
+                                <p class="fs-100 fs-thin text-navy-200">
+                                    Yesterday &mdash;
+                                    <time datetime="PT1H">
+                                        <span aria-hidden="true">1hrs</span>
+                                        <span class="sr-only">1 hours</span>
+                                    </time>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list__card grid">
+                        <div class="card__top card__top--social"></div>
+                        <div class="card__bottom bg-navy-900">
+                            <header class="card__header flex">
+                                <h2 class="fs-200 text-white">Social</h2>
+
+                                <button>
+                                    <span class="sr-only">Menu</span>
+
+                                    <svg
+                                        aria-hidden="true"
+                                        class="header__icon"
+                                        width="21"
+                                        height="5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                                            fill-rule="evenodd"
+                                        />
+                                    </svg>
+                                </button>
+                            </header>
+
+                            <div class="card__time-container flex">
+                                <p class="fs-500 text-white fw-thin">
+                                    <time datetime="PT1H">
+                                        <span aria-hidden="true">1hrs</span>
+                                        <span class="sr-only">1 hours</span>
+                                    </time>
+                                </p>
+                                <p class="fs-100 fs-thin text-navy-200">
+                                    Yesterday &mdash;
+                                    <time datetime="PT3H">
+                                        <span aria-hidden="true">3hrs</span>
+                                        <span class="sr-only">3 hours</span>
+                                    </time>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list__card -care grid">
+                        <div class="card__top card__top--self-care"></div>
+                        <div class="card__bottom bg-navy-900">
+                            <header class="card__header flex">
+                                <h2 class="fs-200 text-white">Self Care</h2>
+
+                                <button>
+                                    <span class="sr-only">Menu</span>
+
+                                    <svg
+                                        aria-hidden="true"
+                                        class="header__icon"
+                                        width="21"
+                                        height="5"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                                            fill-rule="evenodd"
+                                        />
+                                    </svg>
+                                </button>
+                            </header>
+
+                            <div class="card__time-container flex">
+                                <p class="fs-500 text-white fw-thin">
+                                    <time datetime="PT0H">
+                                        <span aria-hidden="true">0hrs</span>
+                                        <span class="sr-only">0 hours</span>
+                                    </time>
+                                </p>
+                                <p class="fs-100 fs-thin text-navy-200">
+                                    Yesterday &mdash;
+                                    <time datetime="PT1H">
+                                        <span aria-hidden="true">1hrs</span>
+                                        <span class="sr-only">1 hours</span>
+                                    </time>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </body>
+</html>

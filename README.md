@@ -13,3 +13,4 @@ This repo contains solutions to [Free and Free+ challenges](https://www.frontend
 | Social proof section      | [See solution](/social-proof-section/)      |
 | Contact form              | [See solution](/contact-form/)              |
 | FAQ accordion             | [See solution](/faq-accordion/)             |
+| Time tracking dashboard   | [See solution](/time-tracking-dashboard/)   |
