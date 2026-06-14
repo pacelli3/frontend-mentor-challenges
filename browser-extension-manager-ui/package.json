@@ -6,7 +6,7 @@
     "scripts": {
         "build": "react-router build",
         "dev": "react-router dev",
-        "start": "react-router-serve ./build/server/index.js",
+        "start": "npm run dev",
         "typecheck": "react-router typegen && tsc",
         "prettier:fix": "prettier . --write",
         "prettier:check": "prettier . --check",
@@ -14,7 +14,6 @@
         "add-ids": "node scripts/add-ids.ts"
     },
     "dependencies": {
-        "@netlify/vite-plugin-react-router": "3.1.1",
         "@react-router/node": "7.16.0",
         "@react-router/serve": "7.16.0",
         "@supabase/ssr": "0.12.0",
@@ -27,6 +26,7 @@
     },
     "devDependencies": {
         "@netlify/vite-plugin": "2.12.7",
+        "@netlify/vite-plugin-react-router": "3.1.1",
         "@react-router/dev": "7.16.0",
         "@tailwindcss/vite": "4.2.2",
         "@types/node": "22",
