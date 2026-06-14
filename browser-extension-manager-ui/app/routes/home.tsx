@@ -43,10 +43,12 @@ const Home = ({loaderData}: Route.ComponentProps) => {
     ];
 
     const buttonListItems = FILTERS.map(filter => (
-        <FilterButton filter={filter} query={query} setFilter={setFilter} />
+        <FilterButton key={filter.label} filter={filter} query={query} setFilter={setFilter} />
     ));
 
-    const extensionListItems = extensions.map(extension => <ExtensionCard extension={extension} />);
+    const extensionListItems = extensions.map(extension => (
+        <ExtensionCard key={extension.id} extension={extension} />
+    ));
 
     return (
         <main className="mbs-6.5 sm:mbs-13.5">

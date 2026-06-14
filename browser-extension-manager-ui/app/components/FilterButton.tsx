@@ -13,7 +13,7 @@ const FilterButton = ({filter, query, setFilter}: FilterButtonProps) => {
     const isActive = filter.value === "" ? query === "" : query === filter.value;
 
     return (
-        <li key={filter.label}>
+        <li>
             <button
                 className={clsx(
                     "cursor-pointer rounded-3xl px-4 py-1.5 shadow-sm outline-1 outline-neutral-200 transition-colors duration-250 ease-in-out focus:outline-2 focus:outline-offset-2 focus:outline-red-500 dark:outline-neutral-600",
