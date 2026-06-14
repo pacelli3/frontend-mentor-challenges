@@ -9,6 +9,8 @@ export default {
         v8_passThroughRequests: true,
         v8_splitRouteModules: true,
         v8_trailingSlashAwareDataRequests: true,
-        v8_viteEnvironmentApi: true,
+
+        // Not supported by Netlify, setting it to `true` prevents the creation of Functions on the build step
+        v8_viteEnvironmentApi: false,
     },
 } satisfies Config;
