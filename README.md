@@ -14,3 +14,4 @@ This repo contains solutions to [Free and Free+ challenges](https://www.frontend
 | Contact form              | [See solution](/contact-form/)              |
 | FAQ accordion             | [See solution](/faq-accordion/)             |
 | Time tracking dashboard   | [See solution](/time-tracking-dashboard/)   |
+| Browser Extension Manager UI   | [See solution](/browser-extension-manager-ui/)   |

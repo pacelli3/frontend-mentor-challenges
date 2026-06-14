@@ -75,8 +75,8 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: [Check]()
-- Live Site URL: [Check]()
+- Solution URL: [Check](https://www.frontendmentor.io/solutions/browser-extension-manager-with-supabase-react-router-v7-and-tailwindcss-13FF5EXJe4)
+- Live Site URL: [Check](https://browser-extension-manager-pacelli3.netlify.app/)
 
 ## My process
 
@@ -253,6 +253,7 @@ I was surprised how easy is to use Supabase. Once a account is created we can fo
     - add ARIA attributes
     - add ARIA live regions
     - test with a screen reader
+    - working on animating transations when a filter is applied
 - Testing:
     - use React Router's `createRoutesStub` function to test components
     - integrate Mock Service Worker for API mocking
