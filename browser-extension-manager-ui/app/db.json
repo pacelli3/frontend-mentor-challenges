@@ -1,0 +1,86 @@
+[
+    {
+        "id": "6ef1ec92-87ef-4e0e-9cf8-487cbd1854e6",
+        "logo_url": "/app/assets/images/logo-devlens.svg",
+        "name": "DevLens",
+        "description": "Quickly inspect page layouts and visualize element boundaries.",
+        "is_active": true
+    },
+    {
+        "id": "75d14123-1601-4f84-af64-d8ba041f9619",
+        "logo_url": "/app/assets/images/logo-style-spy.svg",
+        "name": "StyleSpy",
+        "description": "Instantly analyze and copy CSS from any webpage element.",
+        "is_active": true
+    },
+    {
+        "id": "750bdcc0-9a8f-4a78-88e2-c11fa23db8da",
+        "logo_url": "/app/assets/images/logo-speed-boost.svg",
+        "name": "SpeedBoost",
+        "description": "Optimizes browser resource usage to accelerate page loading.",
+        "is_active": false
+    },
+    {
+        "id": "8bd0f5d0-f23a-4c0a-917e-d50ca9dfaa94",
+        "logo_url": "/app/assets/images/logo-json-wizard.svg",
+        "name": "JSONWizard",
+        "description": "Formats, validates, and prettifies JSON responses in-browser.",
+        "is_active": true
+    },
+    {
+        "id": "7acfafbc-8fc9-48f5-a18a-146f1eb95546",
+        "logo_url": "/app/assets/images/logo-tab-master-pro.svg",
+        "name": "TabMaster Pro",
+        "description": "Organizes browser tabs into groups and sessions.",
+        "is_active": true
+    },
+    {
+        "id": "c53eb90c-9ae1-482c-a3a8-d99d64759cdc",
+        "logo_url": "/app/assets/images/logo-viewport-buddy.svg",
+        "name": "ViewportBuddy",
+        "description": "Simulates various screen resolutions directly within the browser.",
+        "is_active": false
+    },
+    {
+        "id": "d7e7a7b5-4132-4bfd-ac29-6f59516f89c6",
+        "logo_url": "/app/assets/images/logo-markup-notes.svg",
+        "name": "Markup Notes",
+        "description": "Enables annotation and notes directly onto webpages for collaborative debugging.",
+        "is_active": true
+    },
+    {
+        "id": "c55c3e75-ddcd-4cc7-9b24-06615c23bb12",
+        "logo_url": "/app/assets/images/logo-grid-guides.svg",
+        "name": "GridGuides",
+        "description": "Overlay customizable grids and alignment guides on any webpage.",
+        "is_active": false
+    },
+    {
+        "id": "617561a1-d98e-4737-9235-c85380036635",
+        "logo_url": "/app/assets/images/logo-palette-picker.svg",
+        "name": "Palette Picker",
+        "description": "Instantly extracts color palettes from any webpage.",
+        "is_active": true
+    },
+    {
+        "id": "dee389d5-0f44-4808-8013-3a3529670047",
+        "logo_url": "/app/assets/images/logo-link-checker.svg",
+        "name": "LinkChecker",
+        "description": "Scans and highlights broken links on any page.",
+        "is_active": true
+    },
+    {
+        "id": "a0ed225c-3a51-4572-b07f-bc4edf3e5158",
+        "logo_url": "/app/assets/images/logo-dom-snapshot.svg",
+        "name": "DOM Snapshot",
+        "description": "Capture and export DOM structures quickly.",
+        "is_active": false
+    },
+    {
+        "id": "3c6f1318-00f9-4ca2-bdb4-2ba969acc0e2",
+        "logo_url": "/app/assets/images/logo-console-plus.svg",
+        "name": "ConsolePlus",
+        "description": "Enhanced developer console with advanced filtering and logging.",
+        "is_active": true
+    }
+]
