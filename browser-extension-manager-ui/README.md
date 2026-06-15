@@ -255,6 +255,7 @@ I was surprised how easy is to use Supabase. Once a account is created we can fo
 
 ### Continued development
 
+- Add placeholder for when there are no cards to render
 - Refactor hacky approach in `app/contexts/ThemeProvider` from `React.useEffect` to a cookie to fetch selected theme on the server
 - Work on accessibility:
     - add skip to content button
