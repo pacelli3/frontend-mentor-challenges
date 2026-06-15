@@ -28,20 +28,28 @@ cd frontend-mentor-challenges/browser-extension-manager-ui
 npm install
 ```
 
-Start React Router's dev server (Netlify is integrated):
+Start React Router's dev server:
 
 ```bash
 npm run dev
 ```
 
-Build the project and serve locally:
+Under the hood, `@netlify/vite-plugin` is integrated to give React Router's development server parity with Netlify's production environment, enabling platform primitives locally.
+
+This project is configured for deployment on Netlify, I recommend installing Netlify CLI to build and serve locally to test the app before deploying:
+
+```bash
+npm install -g netlify-cli
+```
+
+Build and serve:
 
 ```bash
 npm run build
-npm run start
+npm run preview
 ```
 
-This project uses Prettier for code formatting:
+Lastly, Prettier is used for code formatting:
 
 ```bash
 npm run prettier:fix # Format files
@@ -264,7 +272,7 @@ I was surprised how easy is to use Supabase. Once a account is created we can fo
     - currently, the app contains a single `ErrorBoundary` component, add boundaries on each route
     - mock error responses
 - Interactivity
-    - add a script to toggle the extension's `is_active` property when toggle button is clicked (consider using a fetcher or `Form` component)
+    - add a script to toggle the extension's `is_active` property when toggle button is clicked (consider using a fetcher or `Form` component) ✅
 
 ### Useful resources
 
