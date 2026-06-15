@@ -1,7 +1,5 @@
 import type {Route} from "./+types/root";
 import appStylesHref from "./app.css?url";
-import iconSun from "./assets/images/icon-sun.svg";
-import iconMoon from "./assets/images/icon-moon.svg";
 import {isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration} from "react-router";
 import {ThemeProvider} from "./contexts/ThemeProvider";
 

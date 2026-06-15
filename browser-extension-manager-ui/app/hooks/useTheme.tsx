@@ -4,6 +4,7 @@ import {ThemeContext} from "~/contexts/ThemeProvider";
 const useTheme = () => {
     const context = useContext(ThemeContext);
 
+    // TODO - better error handling
     if (!context) {
         throw new Error("`useTheme` must be within a `ThemeProvider`");
     }
