@@ -21,6 +21,15 @@ export const loader = async ({
     return {extensions};
 };
 
+export const action = async ({request}: Route.ActionArgs) => {
+    const {id, is_active} = (await request.json()) as {id: string; is_active: boolean};
+    const {supabase} = createClient(request);
+    const {error} = await supabase.from("extensions").update({is_active: is_active}).eq("id", id);
+
+    // TODO - add error handling
+    return null;
+};
+
 const Home = ({loaderData}: Route.ComponentProps) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const navigation = useNavigation();

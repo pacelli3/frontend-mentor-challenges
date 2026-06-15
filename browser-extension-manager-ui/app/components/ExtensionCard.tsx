@@ -1,4 +1,4 @@
-import {Link} from "react-router";
+import {Link, useFetcher} from "react-router";
 import {clsx} from "clsx";
 
 interface ExtensionCardProps {
@@ -12,6 +12,8 @@ interface ExtensionCardProps {
 }
 
 const ExtensionCard = ({extension}: ExtensionCardProps) => {
+    const fetcher = useFetcher();
+
     return (
         <li>
             <article className="grid h-39 rounded-2xl bg-neutral-0 px-4 py-3.5 shadow-md outline-1 outline-neutral-100 dark:bg-neutral-800 dark:outline-neutral-600">
@@ -43,17 +45,37 @@ const ExtensionCard = ({extension}: ExtensionCardProps) => {
                         </button>
                     </div>
 
-                    <label className="relative h-4 w-7">
-                        <input className="peer h-0 w-0 opacity-0" type="checkbox" />
-                        <span
-                            className={clsx(
-                                "absolute inset-0 cursor-pointer rounded-2xl transition-colors duration-250 ease-in-out before:absolute before:bottom-0.5 before:left-0.5 before:h-3 before:w-3 before:rounded-full before:bg-neutral-0 before:content-[''] hover:bg-red-500 dark:hover:bg-red-400",
-                                extension.is_active
-                                    ? "bg-red-700 before:translate-x-full dark:bg-red-500"
-                                    : "bg-neutral-300 before:translate-x-0 dark:bg-neutral-600",
-                            )}
-                        ></span>
-                    </label>
+                    <fetcher.Form
+                        onChange={e =>
+                            fetcher.submit(
+                                {
+                                    id: extension.id,
+                                    is_active: (e.currentTarget.is_active as HTMLInputElement)
+                                        .checked,
+                                },
+                                {encType: "application/json", method: "PATCH"},
+                            )
+                        }
+                    >
+                        <label className="relative block h-4 w-7">
+                            <input
+                                className="peer h-0 w-0 opacity-0"
+                                data-id={extension.id}
+                                defaultChecked={extension.is_active}
+                                name="is_active"
+                                value="on"
+                                type="checkbox"
+                            />
+                            <span
+                                className={clsx(
+                                    "absolute inset-0 cursor-pointer rounded-2xl transition-colors duration-250 ease-in-out before:absolute before:bottom-0.5 before:left-0.5 before:h-3 before:w-3 before:rounded-full before:bg-neutral-0 before:content-[''] hover:bg-red-500 dark:hover:bg-red-400",
+                                    extension.is_active
+                                        ? "bg-red-700 before:translate-x-full dark:bg-red-500"
+                                        : "bg-neutral-300 before:translate-x-0 dark:bg-neutral-600",
+                                )}
+                            ></span>
+                        </label>
+                    </fetcher.Form>
                 </div>
             </article>
         </li>
