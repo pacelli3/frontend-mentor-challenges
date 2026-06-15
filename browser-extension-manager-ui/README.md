@@ -253,10 +253,14 @@ For this project I used Supabase's Database and Storage services to:
 
 I was surprised how easy is to use Supabase. Once a account is created we can follow one of the Framework Quickstarts to create a Supabase project, create an app using a template, install a Supabase client library and connect to the app.
 
+#### Dark Mode
+
+To not clutter the README, read at [DARK_MODE.md](./notes/DARK_MODE.md)
+
 ### Continued development
 
 - Add placeholder for when there are no cards to render
-- Refactor hacky approach in `app/contexts/ThemeProvider` from `React.useEffect` to a cookie to fetch selected theme on the server
+- Refactor hacky approach in `app/contexts/ThemeProvider` with 2 `React.useEffect` to implement dark mode ✅
 - Work on accessibility:
     - add skip to content button
     - add ARIA attributes
@@ -297,6 +301,9 @@ I used the following resources to help me with this design:
 - [Mock Service Worker](https://mswjs.io/docs/)
 - [Vitest](https://vitest.dev/)
 - [Use Supabase with React](https://supabase.com/docs/guides/getting-started/quickstarts/reactjs)
+- [Dangerously setting the inner HTML](https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html)
+- [The Quest for the Perfect Dark Mode](https://www.joshwcomeau.com/react/dark-mode/)
+- [Cookies vs. LocalStorage: Storing Session Data and Beyond](https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know)
 
 ## Author
 

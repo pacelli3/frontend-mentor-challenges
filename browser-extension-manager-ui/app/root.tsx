@@ -1,5 +1,7 @@
 import type {Route} from "./+types/root";
 import appStylesHref from "./app.css?url";
+import iconSun from "./assets/images/icon-sun.svg";
+import iconMoon from "./assets/images/icon-moon.svg";
 import {isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration} from "react-router";
 import {ThemeProvider} from "./contexts/ThemeProvider";
 
@@ -42,7 +44,40 @@ export const Layout = ({children}: {children: React.ReactNode}) => {
                 <Meta />
                 <Links />
             </head>
+
             <body className="min-h-screen bg-linear-[180deg,#ebf2fc_0%,#eef8f9_100%] dark:bg-linear-[180deg,#040918_0%,#091540_100%]">
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                        (function() {
+                            function getInitialTheme() {
+                                const persistedTheme = window.localStorage.getItem("extensions-theme");
+                                const hasPersistedTheme = typeof persistedTheme === "string";
+
+                                if (hasPersistedTheme) return persistedTheme;
+
+                                const mediaQueryPreference = window.matchMedia("(prefers-color-scheme: dark)");
+                                const hasMediaQueryPreference = typeof mediaQueryPreference.matches === "boolean";
+
+                                if (hasMediaQueryPreference) {
+                                    return mediaQueryPreference.matches ? "dark" : "light";
+                                }
+
+                                return "light";
+                            }
+
+                            const theme = getInitialTheme();
+                            const root = document.documentElement;
+
+                            if(theme === "dark") {
+                                root.classList.add("dark");
+                            } else {
+                                root.classList.remove("dark");
+                            }
+                        })();
+                    `,
+                    }}
+                ></script>
                 {children}
                 <ScrollRestoration />
                 <Scripts />
