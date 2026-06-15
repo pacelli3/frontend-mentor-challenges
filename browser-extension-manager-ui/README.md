@@ -261,7 +261,7 @@ I was surprised how easy is to use Supabase. Once a account is created we can fo
     - add ARIA attributes
     - add ARIA live regions
     - test with a screen reader
-    - working on animating transations when a filter is applied
+    - working on animating transations when a filter is applied ✅
 - Testing:
     - use React Router's `createRoutesStub` function to test components
     - integrate Mock Service Worker for API mocking

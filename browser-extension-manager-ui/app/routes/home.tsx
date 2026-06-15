@@ -1,6 +1,6 @@
 import type {Route} from "./+types/home";
 import {clsx} from "clsx";
-import {useSearchParams, useNavigation, Link} from "react-router";
+import {useSearchParams, useNavigation} from "react-router";
 import {createClient} from "~/utils/supabase.server";
 import FilterButton from "~/components/FilterButton";
 import ExtensionCard from "~/components/ExtensionCard";
@@ -71,8 +71,9 @@ const Home = ({loaderData}: Route.ComponentProps) => {
 
             <ul
                 className={clsx(
-                    "mbs-6.5 grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-3.5 opacity-100 transition-opacity duration-200",
-                    navigation.state === "loading" && "opacity-25 delay-200",
+                    "mbs-6.5 grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-3.5",
+                    navigation.state === "loading" &&
+                        "animate-[flicker_825ms_ease-in-out] dark:animate-[flicker-dark_825ms_ease-in-out]",
                 )}
             >
                 {extensionListItems}

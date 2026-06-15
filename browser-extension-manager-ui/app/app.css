@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* ------------------------------------------------------------ */
 /*                           FONT FACE                          */
 /* ------------------------------------------------------------ */
@@ -37,8 +39,6 @@
 /*                           TAILWIND                           */
 /* ------------------------------------------------------------ */
 
-@import "tailwindcss";
-
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -68,4 +68,40 @@
     --max-w-container: 65rem;
 
     --shadow-sm-md: 0px 2.5px 4px -0.8px rgb(0 0 0 / 0.1), 0px 1.5px 2.5px -2px rgb(0 0 0 / 0.1);
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flicker-dark {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
