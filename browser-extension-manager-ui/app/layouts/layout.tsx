@@ -10,6 +10,7 @@ const Layout = () => {
         <div className="mx-auto max-w-(--max-w-container) px-8 py-10">
             <header className="flex items-center justify-between gap-x-5 rounded-2xl bg-neutral-0 px-3 py-3 shadow-(--shadow-sm-md) outline-1 outline-neutral-200 dark:bg-neutral-800 dark:outline-0">
                 <svg
+                    aria-label="Extensions"
                     className="w-35.5"
                     xmlns="http://www.w3.org/2000/svg"
                     width="179"
@@ -38,6 +39,8 @@ const Layout = () => {
                 </svg>
 
                 <button
+                    aria-label={theme === "dark" ? "Activate light mode" : "Activate dark mode"}
+                    aria-pressed={theme === "dark"}
                     className="flex cursor-pointer items-center justify-center rounded-lg bg-neutral-100 px-2.5 py-2.5 outline-offset-2 transition-colors duration-250 ease-in-out hover:bg-neutral-300 focus:outline-2 focus:outline-red-500 dark:bg-neutral-700 dark:hover:bg-neutral-600"
                     onClick={() => toggle(theme === "dark" ? "light" : "dark")}
                     type="button"

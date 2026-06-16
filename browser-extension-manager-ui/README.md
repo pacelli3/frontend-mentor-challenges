@@ -263,7 +263,7 @@ To not clutter the README, read at [DARK_MODE.md](./notes/DARK_MODE.md)
 - Refactor hacky approach in `app/contexts/ThemeProvider` with 2 `React.useEffect` to implement dark mode ✅
 - Work on accessibility:
     - add skip to content button
-    - add ARIA attributes
+    - add ARIA attributes ✅
     - add ARIA live regions
     - test with a screen reader
     - working on animating transations when a filter is applied ✅
