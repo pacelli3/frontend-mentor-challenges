@@ -259,7 +259,7 @@ To not clutter the README, read at [DARK_MODE.md](./notes/DARK_MODE.md)
 
 ### Continued development
 
-- Add placeholder for when there are no cards to render
+- Add placeholder for when there are no cards to render ✅
 - Refactor hacky approach in `app/contexts/ThemeProvider` with 2 `React.useEffect` to implement dark mode ✅
 - Work on accessibility:
     - add skip to content button

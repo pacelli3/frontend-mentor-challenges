@@ -2,8 +2,10 @@ import type {Route} from "./+types/home";
 import {clsx} from "clsx";
 import {useSearchParams, useNavigation} from "react-router";
 import {createClient} from "~/utils/supabase.server";
+import {Blocks} from "lucide-react";
 import FilterButton from "~/components/FilterButton";
 import ExtensionCard from "~/components/ExtensionCard";
+import useTheme from "~/hooks/useTheme";
 
 type Extension = {
     id: number;
@@ -33,6 +35,7 @@ export const action = async ({request}: Route.ActionArgs) => {
 const Home = ({loaderData}: Route.ComponentProps) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const navigation = useNavigation();
+    const {theme} = useTheme();
 
     let extensions = loaderData?.extensions ?? [];
     const query = searchParams.get("filter") ?? "";
@@ -69,15 +72,31 @@ const Home = ({loaderData}: Route.ComponentProps) => {
                 <ul className="flex items-center gap-x-2">{buttonListItems}</ul>
             </header>
 
-            <ul
-                className={clsx(
-                    "mbs-6.5 grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-3.5",
-                    navigation.state === "loading" &&
-                        "animate-[flicker_825ms_ease-in-out] dark:animate-[flicker-dark_825ms_ease-in-out]",
-                )}
-            >
-                {extensionListItems}
-            </ul>
+            {extensionListItems.length > 0 ? (
+                <ul
+                    className={clsx(
+                        "mbs-6.5 grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-3.5",
+                        navigation.state === "loading" &&
+                            "animate-[flicker_825ms_ease-in-out] dark:animate-[flicker-dark_825ms_ease-in-out]",
+                    )}
+                >
+                    {extensionListItems}
+                </ul>
+            ) : (
+                <div className="mx-auto mbs-42 flex w-110 flex-col items-center justify-center gap-y-5">
+                    {/* Only visible on dark mode */}
+                    {theme === "dark" && <Blocks size={45} color={"#EDEDED"} strokeWidth={1.5} />}
+
+                    {/* Only visible on light mode */}
+                    {theme === "light" && <Blocks size={45} color={"#091540"} strokeWidth={1.5} />}
+
+                    <p className="text-center text-sm leading-6 text-neutral-800 dark:text-neutral-100">
+                        Your {query ? query : "extensions"} extensions will appear here. Discover
+                        interesting <span className="font-bold">Extensions</span> to follow in your
+                        browser.
+                    </p>
+                </div>
+            )}
         </main>
     );
 };
