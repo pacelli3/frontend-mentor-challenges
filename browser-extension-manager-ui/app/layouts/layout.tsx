@@ -38,8 +38,8 @@ const Layout = () => {
                 </svg>
 
                 <button
-                    onClick={() => toggle(theme === "dark" ? "light" : "dark")}
                     className="flex cursor-pointer items-center justify-center rounded-lg bg-neutral-100 px-2.5 py-2.5 outline-offset-2 transition-colors duration-250 ease-in-out hover:bg-neutral-300 focus:outline-2 focus:outline-red-500 dark:bg-neutral-700 dark:hover:bg-neutral-600"
+                    onClick={() => toggle(theme === "dark" ? "light" : "dark")}
                     type="button"
                 >
                     {/* Only visible on dark mode */}
@@ -47,7 +47,6 @@ const Layout = () => {
                         src={iconSun}
                         alt=""
                         className="hidden w-4.5 dark:inline"
-                        id="toggle-btn-icon"
                         width="22"
                         height="22"
                     />
@@ -57,7 +56,6 @@ const Layout = () => {
                         src={iconMoon}
                         alt=""
                         className="inline w-4.5 dark:hidden"
-                        id="toggle-btn-icon"
                         width="22"
                         height="22"
                     />
