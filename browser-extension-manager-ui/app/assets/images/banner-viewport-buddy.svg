@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="auto">
+  <defs>
+    <filter id="windowShadow" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+    <linearGradient id="urlBarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e3e3e3"/>
+      <stop offset="100%" stop-color="#d4d4d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Desktop background -->
+  <rect width="1280" height="720" fill="#f5f5f5"/>
+
+  <!-- Browser window -->
+  <g filter="url(#windowShadow)">
+    <rect x="60" y="30" width="1160" height="660" rx="12" fill="#ffffff" stroke="#c0c0c0" stroke-width="1"/>
+    <rect x="60" y="30" width="1160" height="48" rx="12" fill="#e8e8e8"/>
+    <rect x="60" y="42" width="1160" height="36" fill="#e8e8e8"/>
+
+    <!-- macOS traffic lights -->
+    <circle cx="86" cy="54" r="7" fill="#ff5f56"/>
+    <circle cx="106" cy="54" r="7" fill="#ffbd2e"/>
+    <circle cx="126" cy="54" r="7" fill="#27c93f"/>
+
+    <!-- URL bar -->
+    <rect x="200" y="38" width="980" height="32" rx="6" fill="url(#urlBarGrad)" stroke="#bcbcbc" stroke-width="0.5"/>
+    <text x="214" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#555">https://www.speedboost-demo.dev</text>
+  </g>
+
+  <!-- Content area -->
+  <g transform="translate(76, 94)">
+    <!-- Extension UI box -->
+    <rect x="0" y="0" width="1128" height="580" rx="16" fill="#fafafa" stroke="#dcdcdc" stroke-width="1"/>
+
+    <!-- Extension header -->
+    <rect x="0" y="0" width="1128" height="92" rx="16" fill="#ffffff" stroke="#dcdcdc" stroke-width="1"/>
+
+    <!-- Logo (provided) -->
+    <g transform="translate(24, 16)">
+      <path fill="#A3C4F3" d="M0 10C0 4.477 4.477 0 10 0h40c5.523 0 10 4.477 10 10v40c0 5.523-4.477 10-10 10H10C4.477 60 0 55.523 0 50V10Z"/>
+      <path fill="#091540" fill-rule="evenodd" d="M20.13 20.32c1.19-1.276 2.882-1.987 4.87-1.987h2.641a1 1 0 0 1 0 2h-2.64c-1.494 0-2.636.522-3.409 1.352-.78.837-1.259 2.068-1.259 3.605v9.42c0 1.539.477 2.77 1.256 3.606.77.828 1.912 1.35 3.412 1.35h9.996c1.5 0 2.642-.522 3.413-1.35.78-.837 1.257-2.068 1.257-3.606v-2.063a1 1 0 0 1 2 0v2.063c0 1.952-.61 3.7-1.793 4.969-1.19 1.277-2.883 1.988-4.877 1.988H25c-1.994 0-3.687-.711-4.876-1.989-1.182-1.269-1.792-3.017-1.792-4.968v-9.42c0-1.953.614-3.7 1.796-4.97Z" clip-rule="evenodd"/>
+      <path fill="#091540" fill-rule="evenodd" d="M35.394 20.333a1 1 0 1 1 0-2h5.272a1 1 0 0 1 1 1v5.272a1 1 0 1 1-2 0v-2.858l-8.09 8.09h2.857a1 1 0 0 1 0 2H29.16a1 1 0 0 1-1-1v-5.27a1 1 0 1 1 2 0v2.856l8.09-8.09h-2.857Z" clip-rule="evenodd"/>
+    </g>
+
+    <!-- Name and description -->
+    <text x="96" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#1a1a1a">ViewportBuddy</text>
+    <text x="96" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#555">Simulates various screen resolutions directly within the browser.</text>
+
+    <!-- Mock page content -->
+    <rect x="20" y="112" width="1088" height="448" rx="4" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+
+    <!-- Gauge label and icon (now showing a monitor/resolution screen) -->
+    <text x="930" y="510" font-family="system-ui, sans-serif" font-size="11" fill="#888">Presets</text>
+    <g transform="translate(960, 524)">
+      <circle cx="24" cy="24" r="24" fill="#FFCFD2" />
+      <!-- Minimal monitor icon -->
+      <rect x="16" y="16" width="16" height="12" rx="1.5" fill="#091540" />
+      <rect x="22" y="28" width="4" height="1.5" fill="#091540" />
+    </g>
+
+    <!-- Dashboard content tailored to viewport simulation -->
+    <text x="44" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#333">Resolution Switching Speed</text>
+
+    <text x="44" y="172" font-family="system-ui, sans-serif" font-size="13" fill="#aaa" text-decoration="line-through">Manual DevTools resizing: 6.8s</text>
+
+    <text x="44" y="198" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#4CAF50">With ViewportBuddy: 0.4s ✓</text>
+
+    <!-- Green progress bar (unchanged layout) -->
+    <rect x="44" y="220" width="600" height="10" rx="5" fill="#e0e0e0"/>
+    <rect x="44" y="220" width="600" height="10" rx="5" fill="#4CAF50"/>
+
+    <!-- Placeholder content replaced with recent resolution presets -->
+    <text x="44" y="250" font-family="system-ui, sans-serif" font-size="13" fill="#555">Recent resolution presets:</text>
+    
+    <rect x="44" y="260" width="340" height="16" rx="3" fill="#f0f0f0"/>
+    <text x="50" y="272" font-family="system-ui, sans-serif" font-size="11" fill="#666">iPhone 15 Pro (393x852) — 1 min ago</text>
+    
+    <rect x="44" y="286" width="300" height="12" rx="2" fill="#e8e8e8"/>
+    <text x="50" y="296" font-family="system-ui, sans-serif" font-size="11" fill="#666">iPad Air (820x1180) — 5 mins ago</text>
+    
+    <rect x="44" y="306" width="280" height="12" rx="2" fill="#e8e8e8"/>
+    <text x="50" y="316" font-family="system-ui, sans-serif" font-size="11" fill="#666">Desktop 1920x1080 — 12 mins ago</text>
+    
+    <rect x="44" y="330" width="260" height="12" rx="2" fill="#e8e8e8"/>
+    <text x="50" y="340" font-family="system-ui, sans-serif" font-size="11" fill="#666">Surface Pro (1366x912) — 25 mins ago</text>
+
+    <!-- Resource usage pills (kept layout, updated for lightweight simulation) -->
+    <rect x="44" y="370" width="140" height="20" rx="10" fill="#FFCFD2" opacity="0.3"/>
+    <text x="54" y="384" font-family="system-ui, sans-serif" font-size="11" fill="#333">CPU −5%</text>
+
+    <rect x="200" y="370" width="140" height="20" rx="10" fill="#BFD8BD" opacity="0.4"/>
+    <text x="210" y="384" font-family="system-ui, sans-serif" font-size="11" fill="#333">Memory −8%</text>
+  </g>
+</svg>

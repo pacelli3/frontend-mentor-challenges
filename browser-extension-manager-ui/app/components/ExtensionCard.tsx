@@ -1,17 +1,13 @@
+import type {Extension} from "~/types/extension";
 import {Link, useFetcher} from "react-router";
 import {clsx} from "clsx";
 
 interface ExtensionCardProps {
-    extension: {
-        id: number;
-        logo_url: string;
-        name: string;
-        description: string;
-        is_active: boolean;
-    };
+    extension: Extension;
+    filter: string;
 }
 
-const ExtensionCard = ({extension}: ExtensionCardProps) => {
+const ExtensionCard = ({extension, filter}: ExtensionCardProps) => {
     const fetcher = useFetcher();
 
     return (
@@ -34,7 +30,8 @@ const ExtensionCard = ({extension}: ExtensionCardProps) => {
                         <Link
                             aria-label={`${extension.name} details.`}
                             className="hover:bg-outline-500 cursor-pointer rounded-3xl px-2.5 py-0.75 text-[13px] font-medium text-neutral-900 outline-1 outline-neutral-300 transition-colors duration-250 ease-in-out hover:bg-red-500 hover:text-neutral-0 focus:bg-neutral-100 focus:text-neutral-900 focus:outline-2 focus:outline-offset-2 focus:outline-red-700 dark:text-neutral-0 dark:outline-neutral-600 dark:hover:bg-red-500 dark:hover:outline-red-500 dark:focus:bg-neutral-600 dark:focus:text-neutral-0 dark:focus:outline-red-500"
-                            to="#"
+                            state={{filter: filter}}
+                            to={`/details/${extension.id}`}
                         >
                             Details
                         </Link>

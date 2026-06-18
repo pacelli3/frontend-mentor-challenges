@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="auto">
+  <defs>
+    <filter id="windowShadow" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+    <linearGradient id="urlBarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e3e3e3"/>
+      <stop offset="100%" stop-color="#d4d4d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Desktop background -->
+  <rect width="1280" height="720" fill="#f5f5f5"/>
+
+  <!-- Browser window -->
+  <g filter="url(#windowShadow)">
+    <rect x="60" y="30" width="1160" height="660" rx="12" fill="#ffffff" stroke="#c0c0c0" stroke-width="1"/>
+    <rect x="60" y="30" width="1160" height="48" rx="12" fill="#e8e8e8"/>
+    <rect x="60" y="42" width="1160" height="36" fill="#e8e8e8"/>
+
+    <!-- macOS traffic lights -->
+    <circle cx="86" cy="54" r="7" fill="#ff5f56"/>
+    <circle cx="106" cy="54" r="7" fill="#ffbd2e"/>
+    <circle cx="126" cy="54" r="7" fill="#27c93f"/>
+
+    <!-- URL bar -->
+    <rect x="200" y="38" width="980" height="32" rx="6" fill="url(#urlBarGrad)" stroke="#bcbcbc" stroke-width="0.5"/>
+    <text x="214" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#555">https://www.speedboost-demo.dev</text>
+  </g>
+
+  <!-- Content area -->
+  <g transform="translate(76, 94)">
+    <!-- Extension UI box -->
+    <rect x="0" y="0" width="1128" height="580" rx="16" fill="#fafafa" stroke="#dcdcdc" stroke-width="1"/>
+
+    <!-- Extension header -->
+    <rect x="0" y="0" width="1128" height="92" rx="16" fill="#ffffff" stroke="#dcdcdc" stroke-width="1"/>
+
+    <!-- Logo (provided) -->
+    <g transform="translate(24, 16)">
+      <path fill="#B9FBC0" d="M0 10C0 4.477 4.477 0 10 0h40c5.523 0 10 4.477 10 10v40c0 5.523-4.477 10-10 10H10C4.477 60 0 55.523 0 50V10Z"/>
+      <path fill="#091540" fill-rule="evenodd" d="M35.363 35.255h-4.406a1 1 0 0 1 0-2h4.406a1 1 0 0 1 0 2Zm-6.855-4.222-3.163 3.163a.992.992 0 0 1-.706.293.999.999 0 0 1-.707-1.707l2.456-2.455-2.456-2.456a1 1 0 0 1 1.413-1.415l3.163 3.163a1 1 0 0 1 0 1.414Zm7.116-13.7H24.377c-4.213 0-7.044 2.96-7.044 7.368v10.596c0 4.408 2.83 7.37 7.044 7.37h11.246c4.213 0 7.044-2.962 7.044-7.37V24.701c0-4.408-2.831-7.368-7.043-7.368Z" clip-rule="evenodd"/>
+    </g>
+
+    <!-- Name and description -->
+    <text x="96" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#1a1a1a">ConsolePlus</text>
+    <text x="96" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#555">Enhanced developer console with advanced filtering and logging.</text>
+
+    <!-- Mock page content -->
+    <rect x="20" y="112" width="1088" height="448" rx="4" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+
+    <!-- Gauge label and icon (now showing a terminal prompt) -->
+    <text x="930" y="510" font-family="system-ui, sans-serif" font-size="11" fill="#888">Live Logs</text>
+    <g transform="translate(960, 524)">
+      <circle cx="24" cy="24" r="24" fill="#FFCFD2" />
+      <!-- Terminal console icon -->
+      <rect x="16" y="16" width="16" height="12" rx="2" fill="#091540" />
+      <path d="M20 20 L22 22 L20 24" stroke="#FFCFD2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <rect x="24" y="20" width="2" height="2" fill="#FFCFD2"/>
+      <rect x="24" y="24" width="6" height="1.5" fill="#FFCFD2"/>
+    </g>
+
+    <!-- Dashboard content tailored to console filtering/logging -->
+    <text x="44" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#333">Console Filtering Speed</text>
+
+    <text x="44" y="172" font-family="system-ui, sans-serif" font-size="13" fill="#aaa" text-decoration="line-through">Raw console output: 3.5s</text>
+
+    <text x="44" y="198" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#4CAF50">With ConsolePlus: 0.4s ✓</text>
+
+    <!-- Green progress bar (unchanged layout) -->
+    <rect x="44" y="220" width="600" height="10" rx="5" fill="#e0e0e0"/>
+    <rect x="44" y="220" width="600" height="10" rx="5" fill="#4CAF50"/>
+
+    <!-- Placeholder content replaced with recent log entries -->
+    <text x="44" y="250" font-family="system-ui, sans-serif" font-size="13" fill="#555">Recent filtered log entries:</text>
+    
+    <rect x="44" y="260" width="340" height="16" rx="3" fill="#f0f0f0"/>
+    <text x="50" y="272" font-family="system-ui, sans-serif" font-size="11" fill="#666">[INFO] App initialized successfully — 1s ago</text>
+    
+    <rect x="44" y="286" width="300" height="12" rx="2" fill="#e8e8e8"/>
+    <text x="50" y="296" font-family="system-ui, sans-serif" font-size="11" fill="#666">[WARN] Deprecated API usage — 3s ago</text>
+    
+    <rect x="44" y="306" width="280" height="12" rx="2" fill="#e8e8e8"/>
+    <text x="50" y="316" font-family="system-ui, sans-serif" font-size="11" fill="#666">[ERROR] Failed to fetch data — 7s ago</text>
+    
+    <rect x="44" y="330" width="260" height="12" rx="2" fill="#e8e8e8"/>
+    <text x="50" y="340" font-family="system-ui, sans-serif" font-size="11" fill="#666">[DEBUG] User action logged — 12s ago</text>
+
+    <!-- Resource usage pills (kept layout, updated for lightweight console) -->
+    <rect x="44" y="370" width="140" height="20" rx="10" fill="#FFCFD2" opacity="0.3"/>
+    <text x="54" y="384" font-family="system-ui, sans-serif" font-size="11" fill="#333">CPU −8%</text>
+
+    <rect x="200" y="370" width="140" height="20" rx="10" fill="#BFD8BD" opacity="0.4"/>
+    <text x="210" y="384" font-family="system-ui, sans-serif" font-size="11" fill="#333">Memory −12%</text>
+  </g>
+</svg>

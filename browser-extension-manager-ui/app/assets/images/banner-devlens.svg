@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="auto">
+  <defs>
+    <filter id="windowShadow" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+    <linearGradient id="urlBarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e3e3e3"/>
+      <stop offset="100%" stop-color="#d4d4d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Desktop background -->
+  <rect width="1280" height="720" fill="#f5f5f5"/>
+
+  <!-- Browser window -->
+  <g filter="url(#windowShadow)">
+    <rect x="60" y="30" width="1160" height="660" rx="12" fill="#ffffff" stroke="#c0c0c0" stroke-width="1"/>
+    <rect x="60" y="30" width="1160" height="48" rx="12" fill="#e8e8e8"/>
+    <rect x="60" y="42" width="1160" height="36" fill="#e8e8e8"/>
+
+    <!-- Traffic lights -->
+    <circle cx="86" cy="54" r="7" fill="#ff5f56"/>
+    <circle cx="106" cy="54" r="7" fill="#ffbd2e"/>
+    <circle cx="126" cy="54" r="7" fill="#27c93f"/>
+
+    <!-- URL bar -->
+    <rect x="200" y="38" width="980" height="32" rx="6" fill="url(#urlBarGrad)" stroke="#bcbcbc" stroke-width="0.5"/>
+    <text x="214" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#555">https://www.devlens-demo.dev</text>
+  </g>
+
+  <!-- Content area -->
+  <g transform="translate(76, 94)">
+    <!-- Extension UI box -->
+    <rect x="0" y="0" width="1128" height="580" rx="8" fill="#fafafa" stroke="#dcdcdc" stroke-width="1"/>
+
+    <!-- Extension header with equal top/bottom padding -->
+    <rect x="0" y="0" width="1128" height="92" rx="8" fill="#ffffff" stroke="#dcdcdc" stroke-width="1"/>
+
+    <!-- Logo (60x60) -->
+    <g transform="translate(24, 16)">
+      <path fill="#BFD8BD" d="M0 10C0 4.477 4.477 0 10 0h40c5.523 0 10 4.477 10 10v40c0 5.523-4.477 10-10 10H10C4.477 60 0 55.523 0 50V10Z"/>
+      <path fill="#091540" fill-rule="evenodd" d="M23.675 15.75c-2.39 0-4.39.851-5.789 2.352-1.393 1.494-2.135 3.573-2.135 5.937v1.074h28.498V24.04c0-2.363-.737-4.442-2.129-5.937-1.397-1.501-3.397-2.352-5.794-2.352h-12.65Zm-2.24 4.951a1.125 1.125 0 0 0 0 2.25h.082a1.125 1.125 0 0 0 0-2.25h-.083Zm3.728 0a1.125 1.125 0 0 0 0 2.25h.083a1.125 1.125 0 0 0 0-2.25h-.083Zm3.73 0a1.125 1.125 0 0 0 0 2.25h.082a1.125 1.125 0 0 0 0-2.25h-.083Z" clip-rule="evenodd"/>
+      <path fill="#091540" d="M29.49 32.25a2.821 2.821 0 1 0 0 5.642 2.821 2.821 0 0 0 0-5.642Z"/>
+      <path fill="#091540" fill-rule="evenodd" d="M15.75 35.96v-8.597h28.5v8.596c0 2.364-.738 4.443-2.13 5.938-1.398 1.5-3.398 2.352-5.795 2.352h-12.65c-2.396 0-4.397-.852-5.794-2.352-1.392-1.495-2.13-3.574-2.13-5.938Zm8.669-.889a5.071 5.071 0 1 1 9.324 2.763l1.509 1.509a1.125 1.125 0 1 1-1.591 1.59l-1.532-1.531a5.071 5.071 0 0 1-7.71-4.33Z" clip-rule="evenodd"/>
+    </g>
+
+    <!-- Extension name and description -->
+    <text x="96" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#1a1a1a">DevLens</text>
+    <text x="96" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#555">Quickly inspect page layouts and visualize element boundaries.</text>
+
+    <!-- Mock page content (shifted down due to larger header) -->
+    <rect x="20" y="112" width="1088" height="448" rx="4" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+
+    <!-- Mock elements -->
+    <rect x="44" y="136" width="160" height="24" rx="4" fill="#e8e8e8"/>
+    <rect x="44" y="168" width="200" height="16" rx="3" fill="#f0f0f0"/>
+    <rect x="44" y="192" width="180" height="16" rx="3" fill="#f0f0f0"/>
+    <rect x="44" y="216" width="140" height="16" rx="3" fill="#f0f0f0"/>
+
+    <!-- Inspected element boundary -->
+    <rect x="44" y="248" width="280" height="120" rx="6" fill="#fafafa" stroke="#4CAF50" stroke-width="2" stroke-dasharray="6,3"/>
+    <rect x="44" y="248" width="280" height="28" rx="6" fill="#eef7ee"/>
+    <text x="60" y="266" font-family="system-ui, sans-serif" font-size="12" fill="#333">.hero-section</text>
+    <text x="60" y="296" font-family="system-ui, sans-serif" font-size="13" fill="#666">Inspected element with layout overlay</text>
+    <text x="60" y="316" font-family="system-ui, sans-serif" font-size="12" fill="#888">Width: 280px · Height: 120px</text>
+
+    <!-- Other element -->
+    <rect x="360" y="136" width="240" height="80" rx="4" fill="#f5f5f5" stroke="#e0e0e0"/>
+    <text x="380" y="162" font-family="system-ui, sans-serif" font-size="12" fill="#999">Image placeholder</text>
+
+    <!-- Floating inspect overlay on another element -->
+    <rect x="700" y="152" width="180" height="60" rx="4" fill="none" stroke="#FF9800" stroke-width="2" stroke-dasharray="4,4"/>
+    <text x="708" y="176" font-family="system-ui, sans-serif" font-size="10" fill="#FF9800">.call-to-action</text>
+
+    <!-- Magnifying glass icon -->
+    <g transform="translate(940, 520)">
+      <circle cx="18" cy="18" r="14" fill="#ffffff" stroke="#333" stroke-width="2"/>
+      <line x1="28" y1="28" x2="40" y2="40" stroke="#333" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="auto">
+  <defs>
+    <filter id="windowShadow" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+    <linearGradient id="urlBarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e3e3e3"/>
+      <stop offset="100%" stop-color="#d4d4d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Desktop background -->
+  <rect width="1280" height="720" fill="#f5f5f5"/>
+
+  <!-- Browser window -->
+  <g filter="url(#windowShadow)">
+    <rect x="60" y="30" width="1160" height="660" rx="12" fill="#ffffff" stroke="#c0c0c0" stroke-width="1"/>
+    <rect x="60" y="30" width="1160" height="48" rx="12" fill="#e8e8e8"/>
+    <rect x="60" y="42" width="1160" height="36" fill="#e8e8e8"/>
+
+    <!-- macOS traffic lights -->
+    <circle cx="86" cy="54" r="7" fill="#ff5f56"/>
+    <circle cx="106" cy="54" r="7" fill="#ffbd2e"/>
+    <circle cx="126" cy="54" r="7" fill="#27c93f"/>
+
+    <!-- URL bar -->
+    <rect x="200" y="38" width="980" height="32" rx="6" fill="url(#urlBarGrad)" stroke="#bcbcbc" stroke-width="0.5"/>
+    <text x="214" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#555">https://www.speedboost-demo.dev</text>
+  </g>
+
+  <!-- Content area (original position – padding already equal) -->
+  <g transform="translate(76, 94)">
+    <!-- Extension UI box – now with border-radius 16px -->
+    <rect x="0" y="0" width="1128" height="580" rx="16" fill="#fafafa" stroke="#dcdcdc" stroke-width="1"/>
+
+    <!-- Extension header – top corners rounded to 16px as well -->
+    <rect x="0" y="0" width="1128" height="92" rx="16" fill="#ffffff" stroke="#dcdcdc" stroke-width="1"/>
+
+    <!-- Logo (provided) -->
+    <g transform="translate(24, 16)">
+      <path fill="#FFCFD2" d="M0 10C0 4.477 4.477 0 10 0h40c5.523 0 10 4.477 10 10v40c0 5.523-4.477 10-10 10H10C4.477 60 0 55.523 0 50V10Z"/>
+      <path fill="#091540" fill-rule="evenodd" d="m35.532 28.321-3.92 3.92a.967.967 0 0 1-.706.294.989.989 0 0 1-.707-.294 1.006 1.006 0 0 1 0-1.413l3.92-3.92a1.006 1.006 0 0 1 1.413 0c.4.387.4 1.027 0 1.413Zm-4.613-7.626c-6 0-10.88 4.88-10.88 10.88 0 .136.003.273.008.407a.396.396 0 0 0 .398.38h4.474a2.658 2.658 0 0 1 2.659 2.862c-.022.266.168.524.435.524h.226a2.666 2.666 0 0 1 2.583 3.323c-.059.23.1.477.337.477a2.66 2.66 0 0 1 2.58 2.018c.06.247.305.425.547.346 4.357-1.417 7.513-5.51 7.513-10.337 0-6-4.88-10.88-10.88-10.88ZM28.122 18.786h5.611a1 1 0 0 0 0-2h-5.61a1 1 0 0 0 0 2Z" clip-rule="evenodd"/>
+      <path fill="#091540" fill-rule="evenodd" d="M29.233 38.413a1 1 0 0 0-1-1h-5.721a1 1 0 0 0 0 2h5.721a1 1 0 0 0 1-1ZM31.152 41.214h-5.721a1 1 0 0 0 0 2h5.721a1 1 0 0 0 0-2ZM25.924 35.026a1 1 0 0 0-1-1H19.2a1 1 0 0 0 0 2h5.723a1 1 0 0 0 1-1Z" clip-rule="evenodd"/>
+    </g>
+
+    <!-- Name and description -->
+    <text x="96" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#1a1a1a">SpeedBoost</text>
+    <text x="96" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#555">Optimizes browser resource usage to accelerate page loading.</text>
+
+    <!-- Mock page content -->
+    <rect x="20" y="112" width="1088" height="448" rx="4" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+
+    <!-- Speed indicator -->
+    <g transform="translate(960, 524)">
+      <circle cx="24" cy="24" r="24" fill="#FFCFD2" />
+      <path d="M18 10l-8 16h6l-2 14 10-16h-6l4-14z" fill="#091540" transform="scale(0.9) translate(2,2)"/>
+    </g>
+
+    <!-- Loading time comparison -->
+    <text x="44" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#333">Page Loading Speed</text>
+
+    <text x="44" y="172" font-family="system-ui, sans-serif" font-size="13" fill="#aaa" text-decoration="line-through">Without SpeedBoost: 4.2s</text>
+
+    <text x="44" y="198" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#4CAF50">With SpeedBoost: 0.8s ✓</text>
+
+    <rect x="44" y="220" width="600" height="10" rx="5" fill="#e0e0e0"/>
+    <rect x="44" y="220" width="600" height="10" rx="5" fill="#4CAF50"/>
+
+    <rect x="44" y="260" width="300" height="16" rx="3" fill="#f0f0f0"/>
+    <rect x="44" y="286" width="200" height="12" rx="2" fill="#e8e8e8"/>
+    <rect x="44" y="306" width="250" height="12" rx="2" fill="#e8e8e8"/>
+    <rect x="44" y="330" width="160" height="12" rx="2" fill="#e8e8e8"/>
+
+    <rect x="44" y="370" width="140" height="20" rx="10" fill="#FFCFD2" opacity="0.3"/>
+    <text x="54" y="384" font-family="system-ui, sans-serif" font-size="11" fill="#333">CPU −32%</text>
+
+    <rect x="200" y="370" width="140" height="20" rx="10" fill="#BFD8BD" opacity="0.4"/>
+    <text x="210" y="384" font-family="system-ui, sans-serif" font-size="11" fill="#333">Memory −28%</text>
+  </g>
+</svg>

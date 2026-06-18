@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="auto">
+  <defs>
+    <filter id="windowShadow" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+    <linearGradient id="urlBarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e3e3e3"/>
+      <stop offset="100%" stop-color="#d4d4d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Desktop background -->
+  <rect width="1280" height="720" fill="#f5f5f5"/>
+
+  <!-- Browser window -->
+  <g filter="url(#windowShadow)">
+    <rect x="60" y="30" width="1160" height="660" rx="12" fill="#ffffff" stroke="#c0c0c0" stroke-width="1"/>
+    <rect x="60" y="30" width="1160" height="48" rx="12" fill="#e8e8e8"/>
+    <rect x="60" y="42" width="1160" height="36" fill="#e8e8e8"/>
+
+    <!-- macOS traffic lights -->
+    <circle cx="86" cy="54" r="7" fill="#ff5f56"/>
+    <circle cx="106" cy="54" r="7" fill="#ffbd2e"/>
+    <circle cx="126" cy="54" r="7" fill="#27c93f"/>
+
+    <!-- URL bar -->
+    <rect x="200" y="38" width="980" height="32" rx="6" fill="url(#urlBarGrad)" stroke="#bcbcbc" stroke-width="0.5"/>
+    <text x="214" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#555">https://www.speedboost-demo.dev</text>
+  </g>
+
+  <!-- Content area -->
+  <g transform="translate(76, 94)">
+    <!-- Extension UI box -->
+    <rect x="0" y="0" width="1128" height="580" rx="16" fill="#fafafa" stroke="#dcdcdc" stroke-width="1"/>
+
+    <!-- Extension header -->
+    <rect x="0" y="0" width="1128" height="92" rx="16" fill="#ffffff" stroke="#dcdcdc" stroke-width="1"/>
+
+    <!-- Logo (provided) -->
+    <g transform="translate(24, 16)">
+      <path fill="#F1C0E8" d="M0 10C0 4.477 4.477 0 10 0h40c5.523 0 10 4.477 10 10v40c0 5.523-4.477 10-10 10H10C4.477 60 0 55.523 0 50V10Z"/>
+      <path stroke="#091540" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.333" d="M36.553 16.008c4.58 0 7.447 3.23 7.447 7.81V36.18c0 4.58-2.867 7.812-7.447 7.812H23.432c-4.58 0-7.432-3.232-7.432-7.812V23.818c0-4.58 2.867-7.81 7.432-7.81h6.876m-7.241 27.97 9.54-10.843a3.176 3.176 0 0 0-.287-4.492l-1.729-1.515a3.18 3.18 0 0 0-4.506.272l-2.123 2.411-7.69 8.707m10.934-5.848 3.246 2.86m6.835-8.508v-.06m-2.083 10.606v.06m-13.25-14.86v-.06m14.621-.241v-.061"/>
+    </g>
+
+    <!-- Name and description -->
+    <text x="96" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#1a1a1a">JSONWizard</text>
+    <text x="96" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#555">Formats, validates, and prettifies JSON responses in-browser.</text>
+
+    <!-- Mock page content -->
+    <rect x="20" y="112" width="1088" height="448" rx="4" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+
+    <!-- Gauge (kept, now labelled for pretty-print) -->
+    <text x="930" y="510" font-family="system-ui, sans-serif" font-size="11" fill="#888">Pretty Print</text>
+    <g transform="translate(960, 524)">
+      <circle cx="24" cy="24" r="24" fill="#FFCFD2" />
+      <path d="M18 10l-8 16h6l-2 14 10-16h-6l4-14z" fill="#091540" transform="scale(0.9) translate(2,2)"/>
+    </g>
+
+    <!-- Dashboard content tailored to JSON formatting -->
+    <text x="44" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#333">JSON Processing Speed</text>
+
+    <text x="44" y="172" font-family="system-ui, sans-serif" font-size="13" fill="#aaa" text-decoration="line-through">Raw minified JSON: 3.2s</text>
+
+    <text x="44" y="198" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#4CAF50">With JSONWizard: 0.05s ✓</text>
+
+    <!-- Green progress bar (unchanged layout) -->
+    <rect x="44" y="220" width="600" height="10" rx="5" fill="#e0e0e0"/>
+    <rect x="44" y="220" width="600" height="10" rx="5" fill="#4CAF50"/>
+
+    <!-- Placeholder content replaced with live JSON previews -->
+    <text x="44" y="250" font-family="system-ui, sans-serif" font-size="13" fill="#555">Live formatted JSON output:</text>
+    
+    <rect x="44" y="260" width="360" height="16" rx="3" fill="#f0f0f0"/>
+    <text x="50" y="272" font-family="monospace, system-ui, sans-serif" font-size="11" fill="#888">{</text>
+    
+    <rect x="44" y="286" width="280" height="12" rx="2" fill="#e8e8e8"/>
+    <text x="60" y="296" font-family="monospace, system-ui, sans-serif" font-size="11" fill="#666">"name": "JSONWizard",</text>
+    
+    <rect x="44" y="306" width="320" height="12" rx="2" fill="#e8e8e8"/>
+    <text x="60" y="316" font-family="monospace, system-ui, sans-serif" font-size="11" fill="#666">"version": "1.0.0",</text>
+    
+    <rect x="44" y="330" width="240" height="12" rx="2" fill="#e8e8e8"/>
+    <text x="60" y="340" font-family="monospace, system-ui, sans-serif" font-size="11" fill="#666">"active": true</text>
+    
+    <rect x="44" y="350" width="60" height="12" rx="2" fill="#f0f0f0"/>
+    <text x="50" y="362" font-family="monospace, system-ui, sans-serif" font-size="11" fill="#888">}</text>
+
+    <!-- Resource usage pills (kept layout, updated percentages) -->
+    <rect x="44" y="390" width="140" height="20" rx="10" fill="#FFCFD2" opacity="0.3"/>
+    <text x="54" y="404" font-family="system-ui, sans-serif" font-size="11" fill="#333">CPU −2%</text>
+
+    <rect x="200" y="390" width="140" height="20" rx="10" fill="#BFD8BD" opacity="0.4"/>
+    <text x="210" y="404" font-family="system-ui, sans-serif" font-size="11" fill="#333">Memory −4%</text>
+  </g>
+</svg>

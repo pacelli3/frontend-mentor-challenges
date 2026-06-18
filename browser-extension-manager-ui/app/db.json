@@ -4,83 +4,239 @@
         "logo_url": "/app/assets/images/logo-devlens.svg",
         "name": "DevLens",
         "description": "Quickly inspect page layouts and visualize element boundaries.",
-        "is_active": true
+        "is_active": true,
+        "created_at": "2026-06-13 13:23:47.660574+00",
+        "banner_url": "/app/assets/images/banner-devlens.svg",
+        "categories": ["extension", "developer tools"],
+        "number_of_users": 20,
+        "rating": "0",
+        "details": {
+            "version": "0.1.0",
+            "last_commit": "2026-06-13 13:23:47.660574+00",
+            "size": "10.0KiB",
+            "languages": ["english"],
+            "developer": "frotend@dev",
+            "is_trader": true
+        }
     },
     {
         "id": "75d14123-1601-4f84-af64-d8ba041f9619",
         "logo_url": "/app/assets/images/logo-style-spy.svg",
         "name": "StyleSpy",
         "description": "Instantly analyze and copy CSS from any webpage element.",
-        "is_active": true
+        "is_active": true,
+        "created_at": "2026-06-13 13:24:53.707968+00",
+        "banner_url": "/app/assets/images/banner-style-spy.svg",
+        "categories": ["extension", "developer tools"],
+        "number_of_users": 30,
+        "rating": "0",
+        "details": {
+            "version": "0.2.0",
+            "last_commit": "2026-06-13 13:24:53.707968+00",
+            "size": "20.0KiB",
+            "languages": ["english"],
+            "developer": "frotend@dev",
+            "is_trader": true
+        }
     },
     {
         "id": "750bdcc0-9a8f-4a78-88e2-c11fa23db8da",
         "logo_url": "/app/assets/images/logo-speed-boost.svg",
         "name": "SpeedBoost",
         "description": "Optimizes browser resource usage to accelerate page loading.",
-        "is_active": false
+        "is_active": false,
+        "created_at": "2026-06-13 13:25:46.970951+00",
+        "banner_url": "/app/assets/images/banner-speed-boost.svg",
+        "categories": ["extension", "developer tools"],
+        "number_of_users": 40,
+        "rating": "0",
+        "details": {
+            "version": "0.4.0",
+            "last_commit": "2026-06-13 13:25:46.970951+00",
+            "size": "40.0KiB",
+            "languages": ["english"],
+            "developer": "frotend@dev",
+            "is_trader": true
+        }
     },
     {
         "id": "8bd0f5d0-f23a-4c0a-917e-d50ca9dfaa94",
         "logo_url": "/app/assets/images/logo-json-wizard.svg",
         "name": "JSONWizard",
         "description": "Formats, validates, and prettifies JSON responses in-browser.",
-        "is_active": true
+        "is_active": true,
+        "created_at": "2026-06-13 13:26:29.543634+00",
+        "banner_url": "/app/assets/images/banner-json-wizard.svg",
+        "categories": ["extension", "developer tools"],
+        "number_of_users": 50,
+        "rating": "0",
+        "details": {
+            "version": "0.5.0",
+            "last_commit": "2026-06-13 13:26:29.543634+00",
+            "size": "50.0KiB",
+            "languages": ["english"],
+            "developer": "frotend@dev",
+            "is_trader": true
+        }
     },
     {
         "id": "7acfafbc-8fc9-48f5-a18a-146f1eb95546",
         "logo_url": "/app/assets/images/logo-tab-master-pro.svg",
         "name": "TabMaster Pro",
         "description": "Organizes browser tabs into groups and sessions.",
-        "is_active": true
+        "is_active": true,
+        "created_at": "2026-06-13 13:27:08.185216+00",
+        "banner_url": "/app/assets/images/banner-tab-master-pro.svg",
+        "categories": ["extension", "developer tools"],
+        "number_of_users": 60,
+        "rating": "0",
+        "details": {
+            "version": "0.6.0",
+            "last_commit": "2026-06-13 13:27:08.185216+00",
+            "size": "60.0KiB",
+            "languages": ["english"],
+            "developer": "frotend@dev",
+            "is_trader": true
+        }
     },
     {
         "id": "c53eb90c-9ae1-482c-a3a8-d99d64759cdc",
         "logo_url": "/app/assets/images/logo-viewport-buddy.svg",
         "name": "ViewportBuddy",
         "description": "Simulates various screen resolutions directly within the browser.",
-        "is_active": false
+        "is_active": false,
+        "created_at": "2026-06-13 13:27:59.471539+00",
+        "banner_url": "/app/assets/images/banner-viewport-buddy.svg",
+        "categories": ["extension", "developer tools"],
+        "number_of_users": 70,
+        "rating": "0",
+        "details": {
+            "version": "0.7.0",
+            "last_commit": "2026-06-13 13:27:59.471539+00",
+            "size": "70.0KiB",
+            "languages": ["english"],
+            "developer": "frotend@dev",
+            "is_trader": true
+        }
     },
     {
         "id": "d7e7a7b5-4132-4bfd-ac29-6f59516f89c6",
         "logo_url": "/app/assets/images/logo-markup-notes.svg",
         "name": "Markup Notes",
         "description": "Enables annotation and notes directly onto webpages for collaborative debugging.",
-        "is_active": true
+        "is_active": true,
+        "created_at": "2026-06-13 13:28:38.252556+00",
+        "banner_url": "/app/assets/images/banner-markup-notes.svg",
+        "categories": ["extension", "developer tools"],
+        "number_of_users": 80,
+        "rating": "0",
+        "details": {
+            "version": "0.8.0",
+            "last_commit": "2026-06-13 13:28:38.252556+00",
+            "size": "80.0KiB",
+            "languages": ["english"],
+            "developer": "frotend@dev",
+            "is_trader": true
+        }
     },
     {
         "id": "c55c3e75-ddcd-4cc7-9b24-06615c23bb12",
         "logo_url": "/app/assets/images/logo-grid-guides.svg",
         "name": "GridGuides",
         "description": "Overlay customizable grids and alignment guides on any webpage.",
-        "is_active": false
+        "is_active": false,
+        "created_at": "2026-06-13 13:29:16.002865+00",
+        "banner_url": "/app/assets/images/banner-grid-guides.svg",
+        "categories": ["extension", "developer tools"],
+        "number_of_users": 90,
+        "rating": "0",
+        "details": {
+            "version": "0.9.0",
+            "last_commit": "2026-06-13 13:29:16.002865+00",
+            "size": "90.0KiB",
+            "languages": ["english"],
+            "developer": "frotend@dev",
+            "is_trader": true
+        }
     },
     {
         "id": "617561a1-d98e-4737-9235-c85380036635",
         "logo_url": "/app/assets/images/logo-palette-picker.svg",
         "name": "Palette Picker",
         "description": "Instantly extracts color palettes from any webpage.",
-        "is_active": true
+        "is_active": true,
+        "created_at": "2026-06-13 13:29:58.163198+00",
+        "banner_url": "/app/assets/images/banner-palette-picker.svg",
+        "categories": ["extension", "developer tools"],
+        "number_of_users": 100,
+        "rating": "0",
+        "details": {
+            "version": "0.10.0",
+            "last_commit": "2026-06-13 13:29:58.163198+00",
+            "size": "100.0KiB",
+            "languages": ["english"],
+            "developer": "frotend@dev",
+            "is_trader": true
+        }
     },
     {
         "id": "dee389d5-0f44-4808-8013-3a3529670047",
         "logo_url": "/app/assets/images/logo-link-checker.svg",
         "name": "LinkChecker",
         "description": "Scans and highlights broken links on any page.",
-        "is_active": true
+        "is_active": true,
+        "created_at": "2026-06-13 13:30:38.211294+00",
+        "banner_url": "/app/assets/images/banner-link-checker.svg",
+        "categories": ["extension", "developer tools"],
+        "number_of_users": 200,
+        "rating": "0",
+        "details": {
+            "version": "0.11.0",
+            "last_commit": "2026-06-13 13:30:38.211294+00",
+            "size": "200.0KiB",
+            "languages": ["english"],
+            "developer": "frotend@dev",
+            "is_trader": true
+        }
     },
     {
         "id": "a0ed225c-3a51-4572-b07f-bc4edf3e5158",
         "logo_url": "/app/assets/images/logo-dom-snapshot.svg",
         "name": "DOM Snapshot",
         "description": "Capture and export DOM structures quickly.",
-        "is_active": false
+        "is_active": false,
+        "created_at": "2026-06-13 13:31:12.89832+00",
+        "banner_url": "/app/assets/images/banner-dom-snapshot.svg",
+        "categories": ["extension", "developer tools"],
+        "number_of_users": 300,
+        "rating": "0",
+        "details": {
+            "version": "0.12.0",
+            "last_commit": "2026-06-13 13:31:12.89832+00",
+            "size": "300.0KiB",
+            "languages": ["english"],
+            "developer": "frotend@dev",
+            "is_trader": true
+        }
     },
     {
         "id": "3c6f1318-00f9-4ca2-bdb4-2ba969acc0e2",
         "logo_url": "/app/assets/images/logo-console-plus.svg",
         "name": "ConsolePlus",
         "description": "Enhanced developer console with advanced filtering and logging.",
-        "is_active": true
+        "is_active": true,
+        "created_at": "2026-06-13 13:32:00.440876+00",
+        "banner_url": "/app/assets/images/banner-console-plus.svg",
+        "categories": ["extension", "developer tools"],
+        "number_of_users": 400,
+        "rating": "0",
+        "details": {
+            "version": "0.13.0",
+            "last_commit": "2026-06-13 13:32:00.440876+00",
+            "size": "400.0KiB",
+            "languages": ["english"],
+            "developer": "frotend@dev",
+            "is_trader": true
+        }
     }
 ]

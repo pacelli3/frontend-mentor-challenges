@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="auto">
+  <defs>
+    <filter id="windowShadow" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+    <linearGradient id="urlBarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e3e3e3"/>
+      <stop offset="100%" stop-color="#d4d4d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Desktop background -->
+  <rect width="1280" height="720" fill="#f5f5f5"/>
+
+  <!-- Browser window -->
+  <g filter="url(#windowShadow)">
+    <rect x="60" y="30" width="1160" height="660" rx="12" fill="#ffffff" stroke="#c0c0c0" stroke-width="1"/>
+    <rect x="60" y="30" width="1160" height="48" rx="12" fill="#e8e8e8"/>
+    <rect x="60" y="42" width="1160" height="36" fill="#e8e8e8"/>
+
+    <!-- macOS traffic lights -->
+    <circle cx="86" cy="54" r="7" fill="#ff5f56"/>
+    <circle cx="106" cy="54" r="7" fill="#ffbd2e"/>
+    <circle cx="126" cy="54" r="7" fill="#27c93f"/>
+
+    <!-- URL bar -->
+    <rect x="200" y="38" width="980" height="32" rx="6" fill="url(#urlBarGrad)" stroke="#bcbcbc" stroke-width="0.5"/>
+    <text x="214" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#555">https://www.speedboost-demo.dev</text>
+  </g>
+
+  <!-- Content area -->
+  <g transform="translate(76, 94)">
+    <!-- Extension UI box -->
+    <rect x="0" y="0" width="1128" height="580" rx="16" fill="#fafafa" stroke="#dcdcdc" stroke-width="1"/>
+
+    <!-- Extension header -->
+    <rect x="0" y="0" width="1128" height="92" rx="16" fill="#ffffff" stroke="#dcdcdc" stroke-width="1"/>
+
+    <!-- Logo (provided) -->
+    <g transform="translate(24, 16)">
+      <path fill="#A9D6E5" d="M0 10C0 4.477 4.477 0 10 0h40c5.523 0 10 4.477 10 10v40c0 5.523-4.477 10-10 10H10C4.477 60 0 55.523 0 50V10Z"/>
+      <path fill="#091540" fill-rule="evenodd" d="M19.32 19.197C20.633 17.788 22.502 17 24.71 17h11.246c2.212 0 4.082.788 5.394 2.197 1.305 1.4 1.983 3.335 1.983 5.505v10.596c0 2.17-.678 4.104-1.983 5.505C40.038 42.213 38.167 43 35.955 43H24.71c-2.213 0-4.083-.788-5.395-2.197-1.304-1.401-1.982-3.335-1.982-5.505V24.702c0-2.171.682-4.105 1.987-5.506Zm1.463 1.363c-.903.969-1.45 2.386-1.45 4.142v10.596c0 1.757.545 3.174 1.446 4.142.894.96 2.212 1.56 3.93 1.56h11.246c1.718 0 3.038-.6 3.932-1.56.901-.968 1.446-2.385 1.446-4.142V24.702c0-1.757-.545-3.174-1.446-4.142-.894-.96-2.213-1.56-3.931-1.56H24.709c-1.711 0-3.03.6-3.926 1.56Z" clip-rule="evenodd"/>
+      <path fill="#091540" fill-rule="evenodd" d="M23.685 24.188a1 1 0 0 1 1-1h2.644a1 1 0 1 1 0 2h-1.644v9.631h1.644a1 1 0 1 1 0 2h-2.644a1 1 0 0 1-1-1V24.187ZM32.339 24.188a1 1 0 0 1 1-1h2.644a1 1 0 0 1 1 1v11.631a1 1 0 0 1-1 1h-2.644a1 1 0 0 1 0-2h1.644v-9.632h-1.644a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+    </g>
+
+    <!-- Name and description -->
+    <text x="96" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#1a1a1a">StyleSpy</text>
+    <text x="96" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#555">Instantly analyze and copy CSS from any webpage element.</text>
+
+    <!-- Mock page content -->
+    <rect x="20" y="112" width="1088" height="448" rx="4" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+
+    <!-- Gauge (kept as-is, now labelled for live preview) -->
+    <text x="930" y="510" font-family="system-ui, sans-serif" font-size="11" fill="#888">Live hover</text>
+    <g transform="translate(960, 524)">
+      <circle cx="24" cy="24" r="24" fill="#FFCFD2" />
+      <path d="M18 10l-8 16h6l-2 14 10-16h-6l4-14z" fill="#091540" transform="scale(0.9) translate(2,2)"/>
+    </g>
+
+    <!-- Dashboard content tailored to CSS inspection -->
+    <text x="44" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#333">CSS Rule Detection Speed</text>
+
+    <text x="44" y="172" font-family="system-ui, sans-serif" font-size="13" fill="#aaa" text-decoration="line-through">Manual DevTools search: 8.5s</text>
+
+    <text x="44" y="198" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#4CAF50">With StyleSpy: 0.2s ✓</text>
+
+    <!-- Green progress bar (unchanged layout) -->
+    <rect x="44" y="220" width="600" height="10" rx="5" fill="#e0e0e0"/>
+    <rect x="44" y="220" width="600" height="10" rx="5" fill="#4CAF50"/>
+
+    <!-- Replaced placeholder blocks with actual CSS rule previews -->
+    <text x="44" y="250" font-family="system-ui, sans-serif" font-size="13" fill="#555">Live CSS rules detected:</text>
+    
+    <rect x="44" y="260" width="320" height="16" rx="3" fill="#f0f0f0"/>
+    <text x="50" y="272" font-family="monospace, system-ui, sans-serif" font-size="11" fill="#666">.header { background: #f5f5f5; }</text>
+    
+    <rect x="44" y="286" width="240" height="12" rx="2" fill="#e8e8e8"/>
+    <text x="50" y="296" font-family="monospace, system-ui, sans-serif" font-size="11" fill="#666">#nav li:hover { color: blue; }</text>
+    
+    <rect x="44" y="306" width="280" height="12" rx="2" fill="#e8e8e8"/>
+    <text x="50" y="316" font-family="monospace, system-ui, sans-serif" font-size="11" fill="#666">button.primary { border-radius: 8px; }</text>
+    
+    <rect x="44" y="330" width="180" height="12" rx="2" fill="#e8e8e8"/>
+    <text x="50" y="340" font-family="monospace, system-ui, sans-serif" font-size="11" fill="#666">p { line-height: 1.6; }</text>
+
+    <!-- Resource usage pills (kept layout, updated percentages for a lightweight inspector) -->
+    <rect x="44" y="370" width="140" height="20" rx="10" fill="#FFCFD2" opacity="0.3"/>
+    <text x="54" y="384" font-family="system-ui, sans-serif" font-size="11" fill="#333">CPU −3%</text>
+
+    <rect x="200" y="370" width="140" height="20" rx="10" fill="#BFD8BD" opacity="0.4"/>
+    <text x="210" y="384" font-family="system-ui, sans-serif" font-size="11" fill="#333">Memory −5%</text>
+  </g>
+</svg>
