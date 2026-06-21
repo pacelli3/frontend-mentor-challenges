@@ -1,8 +1,9 @@
 import type {Route} from "./+types/extension-details";
 import type {Extension} from "~/types/extension";
 import {clsx} from "clsx";
+import {STATUS_CODES} from "~/utils/status-codes";
 import {Share2, Star, Mail, CircleCheckBig, MoveLeft} from "lucide-react";
-import {useFetcher, Link, useLocation} from "react-router";
+import {useFetcher, Link, useLocation, data} from "react-router";
 import {createClient} from "~/utils/supabase.server";
 import toAmericanDateFormat from "~/utils/to-american-date-format";
 
@@ -18,19 +19,33 @@ export const loader = async ({
         .single();
 
     if (error) {
-        // TODO - add error handling
+        throw data(
+            {
+                message: error.message,
+                hint: error.hint || STATUS_CODES[error.code].description,
+                code: error.code,
+            },
+            {status: STATUS_CODES[error.code].httpStatus || 400},
+        );
     }
 
     return {extension};
 };
 
-export const action = async ({params, request}: Route.ActionArgs) => {
+export const action = async ({request}: Route.ActionArgs) => {
     const {id, is_active} = (await request.json()) as {id: string; is_active: boolean};
     const {supabase} = createClient(request);
     const {error} = await supabase.from("extensions").update({is_active: is_active}).eq("id", id);
 
     if (error) {
-        // TODO - add error handling
+        throw data(
+            {
+                message: error.message,
+                hint: error.hint || STATUS_CODES[error.code].description,
+                code: error.code,
+            },
+            {status: STATUS_CODES[error.code].httpStatus || 400},
+        );
     }
 
     return null;

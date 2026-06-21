@@ -94,29 +94,48 @@ export default function App() {
 
 export const ErrorBoundary = ({error}: Route.ErrorBoundaryProps) => {
     let message = "Oops!";
-    let details = "An unexpected error occurred.";
+    let details = "";
+    let status: number | undefined;
     let stack: string | undefined;
 
     if (isRouteErrorResponse(error)) {
-        message = error.status === 404 ? "404" : "Error";
-        details =
-            error.status === 404
-                ? "The requested page could not be found."
-                : error.statusText || details;
+        const data = error.data as {message: string; hint: string; code: string};
+        message = data.message;
+        details = data.hint;
+        status = error.status;
     } else if (import.meta.env.DEV && error && error instanceof Error) {
-        details = error.message;
+        message = error.message;
         stack = error.stack;
+    } else {
+        message = "Unknown error";
     }
 
     return (
-        <main className="container mx-auto p-4 pt-16">
-            <h1>{message}</h1>
-            <p>{details}</p>
-            {stack && (
-                <pre className="w-full overflow-x-auto p-4">
-                    <code>{stack}</code>
-                </pre>
-            )}
-        </main>
+        <div>
+            <header className="flex border-b border-solid border-neutral-300 dark:border-neutral-600">
+                <p className="mx-5 border-x border-neutral-300 px-7.5 py-4 text-sm font-bold text-neutral-800 uppercase sm:mx-15 sm:text-lg dark:border-neutral-600 dark:text-neutral-300">
+                    Error
+                </p>
+            </header>
+            <main className="relative mbs-16 flex min-h-[50vh] flex-col items-center justify-center px-7.5 font-medium tracking-tight">
+                {status && (
+                    <span className="absolute -z-1 text-[32vw] font-bold text-neutral-300 opacity-50 dark:text-neutral-600">
+                        {status}
+                    </span>
+                )}
+                <h1 className="z-1 mbe-6 max-w-prose text-center text-2xl text-neutral-900 md:text-4xl dark:text-neutral-300">
+                    {message}
+                </h1>
+
+                {details && (
+                    <p className="text-lg text-neutral-900 dark:text-neutral-300">{details}</p>
+                )}
+                {stack && (
+                    <pre className="mbs-2 max-w-full overflow-auto text-neutral-900 dark:text-neutral-300">
+                        {stack}
+                    </pre>
+                )}
+            </main>
+        </div>
     );
 };

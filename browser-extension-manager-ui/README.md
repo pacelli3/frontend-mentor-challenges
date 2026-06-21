@@ -272,9 +272,9 @@ To not clutter the README, read at [DARK_MODE.md](./notes/DARK_MODE.md)
     - integrate Mock Service Worker for API mocking
     - integrate Vitest to write unit tests for components
 - Extra routes:
-    - add a `/details/:extensionId` route, to render detail about each extension, route (this route will need a banner, get it from official app)
+    - add a `/details/:extensionId` route, to render detail about each extension, route (this route will need a banner, get it from official app) ✅
 - Error handling
-    - currently, the app contains a single `ErrorBoundary` component, add boundaries on each route
+    - currently, the app contains a single `ErrorBoundary` component, add boundaries on each route ✅
     - mock error responses
 - Interactivity
     - add a script to toggle the extension's `is_active` property when toggle button is clicked (consider using a fetcher or `Form` component) ✅
@@ -304,6 +304,7 @@ I used the following resources to help me with this design:
 - [Dangerously setting the inner HTML](https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html)
 - [The Quest for the Perfect Dark Mode](https://www.joshwcomeau.com/react/dark-mode/)
 - [Cookies vs. LocalStorage: Storing Session Data and Beyond](https://supertokens.com/blog/cookies-vs-localstorage-for-sessions-everything-you-need-to-know)
+- [PostgREST Error Codes](https://docs.postgrest.org/en/v12/references/errors.html#postgrest-error-codes)
 
 ## Author
 
@@ -311,7 +312,7 @@ I used the following resources to help me with this design:
 
 ## Acknowledgments
 
-I closely followed Frontend Mentor's 404 page to design the catchall route of the app.
+I closely followed Frontend Mentor's 404 page to design the catchall route of the app and Google's design for extension detail page.
 
 ## License
 

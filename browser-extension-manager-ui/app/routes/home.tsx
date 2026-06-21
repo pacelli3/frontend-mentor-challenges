@@ -1,9 +1,10 @@
 import type {Route} from "./+types/home";
 import type {Extension} from "~/types/extension";
 import {clsx} from "clsx";
-import {useSearchParams, useNavigation, Link} from "react-router";
+import {useSearchParams, useNavigation, Link, data} from "react-router";
 import {createClient} from "~/utils/supabase.server";
 import {Blocks} from "lucide-react";
+import {STATUS_CODES} from "~/utils/status-codes";
 import FilterButton from "~/components/FilterButton";
 import ExtensionCard from "~/components/ExtensionCard";
 import useTheme from "~/hooks/useTheme";
@@ -15,7 +16,14 @@ export const loader = async ({
     const {data: extensions, error} = await supabase.from("extensions").select("*");
 
     if (error) {
-        // TODO - add error handling
+        throw data(
+            {
+                message: error.message,
+                hint: error.hint || STATUS_CODES[error.code].description,
+                code: error.code,
+            },
+            {status: STATUS_CODES[error.code].httpStatus || 400},
+        );
     }
 
     return {extensions};
@@ -27,7 +35,14 @@ export const action = async ({request}: Route.ActionArgs) => {
     const {error} = await supabase.from("extensions").update({is_active: is_active}).eq("id", id);
 
     if (error) {
-        // TODO - add error handling
+        throw data(
+            {
+                message: error.message,
+                hint: error.hint || STATUS_CODES[error.code].description,
+                code: error.code,
+            },
+            {status: STATUS_CODES[error.code].httpStatus || 400},
+        );
     }
 
     return null;
