@@ -1,0 +1,169 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+    <head>
+        <!-- Display site properly based on user's device -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Metadata -->
+        <title>Frontend Mentor | Bento grid</title>
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+
+        <!-- Fonts preloads — requests the necessary fonts in advance to avoid Flash of Unstyle Text (FOUT) -->
+        <link
+            anonymous
+            as="font"
+            href="/src/assets/fonts/dm-sans-v17-latin-regular.woff2"
+            rel="preload"
+            type="font/woff2"
+        />
+
+        <link
+            anonymous
+            as="font"
+            href="/src/assets/fonts/dm-sans-v17-latin-500.woff2"
+            rel="preload"
+            type="font/woff2"
+        />
+
+        <!-- CSS -->
+        <link href="/src/styles.css" rel="stylesheet" />
+    </head>
+
+    <body class="bg-neutral-100">
+        <main class="px-4">
+            <div
+                class="mx-auto my-[clamp(1.625rem,5vw,4.125rem)] grid max-w-[clamp(19.0625rem,80%,55.75rem)] gap-6 [grid-template-areas:'one''two''three''four''five''six''seven''eight'] sm:[grid-template-areas:'one_one''two_three''four_eight''six_seven''five_five'] min-[60rem]:[grid-template-areas:'seven_one_one_four''seven_two_three_four''eight_two_three_four''eight_six_five_five']"
+            >
+                <section
+                    class="grid justify-items-center gap-4 overflow-clip rounded-md bg-purple-500 p-8 text-center tracking-tighter text-white [grid-area:one] min-[60rem]:px-6"
+                >
+                    <h1
+                        class="text-[clamp(2.25rem,5vw,3rem)] leading-[0.95] font-medium text-balance"
+                    >
+                        Social Media <span class="text-yellow-500">10x</span>
+                        <span class="italic">Faster</span> with AI
+                    </h1>
+                    <img
+                        class="w-45"
+                        src="/src/assets/images/illustration-five-stars.webp"
+                        alt=""
+                    />
+                    <p class="-mbs-3 text-center">Over 4,000 5-star reviews</p>
+                </section>
+
+                <section
+                    class="grid justify-items-center gap-3 overflow-clip rounded-md bg-white p-3 [grid-area:two] min-[60rem]:justify-items-start min-[60rem]:gap-1 min-[60rem]:p-4.5"
+                >
+                    <h2
+                        class="text-[clamp(1.25rem,5vw,1.5rem)] leading-none font-medium tracking-tighter text-balance text-black"
+                    >
+                        Manage multiple accounts and platforms.
+                    </h2>
+                    <img
+                        class="-order-1 w-full max-w-none min-[60rem]:w-[145%]"
+                        src="/src/assets/images/illustration-multiple-platforms.webp"
+                        alt=""
+                    />
+                </section>
+
+                <section
+                    class="grid gap-3 overflow-clip rounded-md bg-yellow-500 p-3 text-balance [grid-area:three] min-[60rem]:gap-1 min-[60rem]:p-4.5"
+                >
+                    <h2
+                        class="text-[clamp(1.25rem,5vw,1.5rem)] leading-none font-medium tracking-tighter text-black"
+                    >
+                        Maintain a consistent posting schedule
+                    </h2>
+                    <img
+                        class="-mbe-8 w-[67%] max-w-none min-[60rem]:-mbe-25 min-[60rem]:w-full"
+                        src="/src/assets/images/illustration-consistent-schedule.webp"
+                        alt=""
+                    />
+                </section>
+
+                <section
+                    class="grid justify-items-center gap-5 overflow-clip rounded-md bg-purple-100 px-3 py-7 [grid-area:four] min-[60rem]:justify-items-start min-[60rem]:px-4.5"
+                >
+                    <h2
+                        class="text-[clamp(1.25rem,5vw,1.5rem)] leading-none font-medium tracking-tighter text-black"
+                    >
+                        Schedule to social media.
+                    </h2>
+                    <img
+                        class="w-full min-[60rem]:w-[180%] min-[60rem]:max-w-none"
+                        src="/src/assets/images/illustration-schedule-posts.webp"
+                        alt=""
+                    />
+                    <p
+                        class="-mbs-1 text-center text-sm leading-[1.1] text-pretty min-[60rem]:text-left"
+                    >
+                        Optimize post timings to publish content at the perfect time for your
+                        audience.
+                    </p>
+                </section>
+
+                <section
+                    class="grid justify-items-center gap-7.5 overflow-clip rounded-md bg-purple-500 p-5 [grid-area:five] sm:grid-cols-2 sm:items-center min-[60rem]:gap-1"
+                >
+                    <h2
+                        class="w-[75%] text-center text-[clamp(1.5rem,5vw,1.875rem)] leading-[0.98] font-medium tracking-tight text-white min-[60rem]:w-full"
+                    >
+                        Grow followers with non-stop content.
+                    </h2>
+                    <img
+                        class="-order-1 w-[78%] min-[60rem]:w-[95%]"
+                        src="/src/assets/images/illustration-grow-followers.webp"
+                        alt=""
+                    />
+                </section>
+
+                <section
+                    class="grid justify-items-start gap-4 overflow-clip rounded-md bg-white p-4 [grid-area:six]"
+                >
+                    <h2 class="text-4xl leading-none font-medium tracking-tight text-black">
+                        <span class="align-top">></span>56%
+                        <span class="mbs-2.5 block text-sm font-normal tracking-normal">
+                            faster audience growth
+                        </span>
+                    </h2>
+                    <img
+                        class="w-[60%] min-[60rem]:w-[85%]"
+                        src="/src/assets/images/illustration-audience-growth.webp"
+                        alt=""
+                    />
+                </section>
+
+                <section
+                    class="grid justify-items-start gap-4 overflow-clip rounded-md bg-yellow-100 px-6 py-7.5 [grid-area:seven] min-[60rem]:items-center min-[60rem]:py-3.5 min-[60rem]:pe-0"
+                >
+                    <h2
+                        class="text-[clamp(1.5rem,5vw,1.875rem)] leading-[0.98] font-medium tracking-tight text-black min-[60rem]:mbs-auto"
+                    >
+                        Create and schedule content <i class="text-purple-500">quicker</i>.
+                    </h2>
+                    <img
+                        class="w-[69%] min-[60rem]:mbe-auto min-[60rem]:w-[77%]"
+                        src="/src/assets/images/illustration-create-post.webp"
+                        alt=""
+                    />
+                </section>
+
+                <section
+                    class="grid justify-items-start gap-4 overflow-clip rounded-md bg-yellow-500 px-4.5 py-3.5 [grid-area:eight] min-[60rem]:gap-12"
+                >
+                    <h2
+                        class="text-[clamp(1.5rem,5vw,1.875rem)] leading-none font-medium tracking-tight text-black"
+                    >
+                        Write your content using AI.
+                    </h2>
+                    <img
+                        class="w-[75%] min-[60rem]:w-full"
+                        src="/src/assets/images/illustration-ai-content.webp"
+                        alt=""
+                    />
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

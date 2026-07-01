@@ -1,0 +1,12 @@
+{
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "printWidth": 100,
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": false,
+    "arrowParens": "avoid",
+    "bracketSpacing": false,
+    "objectWrap": "preserve",
+    "tailwindStylesheet": "./src/styles.css",
+    "tailwindFunctions": ["tw"]
+}
